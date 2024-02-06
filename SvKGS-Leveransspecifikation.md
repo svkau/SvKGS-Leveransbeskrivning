@@ -84,7 +84,7 @@ Arkivpaketet i sin helhet utformas i enlighet med Riksarkivets specifikation
 > Slutdatum för den levererade informationen i leveransfilen. Datumet anges i formatet xs:dateTime (enligt [W3C XML Schema Definition Language](https://www.w3.org/TR/xmlschema11-2/)).
 
  
-> **Exempel:** 2023-01-01T00:00:00
+> **Exempel:** 2023-12-31T00:00:00
 
 > **Nyckel:**	`slutdatum`<br/>
 > **Datatyp:**	sträng
@@ -191,7 +191,7 @@ Arkivpaketet i sin helhet utformas i enlighet med Riksarkivets specifikation
  
 > **Exempel:** 2520037173
 
-> **Nyckel:**	`ansvarig_enhet_id`<br/>
+> **Nyckel:**	`informationsägare_id`<br/>
 > **Datatyp:**	sträng
 
 ---
@@ -217,7 +217,7 @@ Arkivpaketet i sin helhet utformas i enlighet med Riksarkivets specifikation
  
 > **Exempel:** ESSArch
 
-> **Nyckel:**	`bevarandessytem`<br/>
+> **Nyckel:**	`bevarandesystem`<br/>
 > **Datatyp:**	sträng
 
 ---
@@ -230,7 +230,7 @@ Arkivpaketet i sin helhet utformas i enlighet med Riksarkivets specifikation
  
 > **Exempel:** 2.0
 
-> **Nyckel:**	`bevarandessytem`<br/>
+> **Nyckel:**	`bevarandesystem_version`<br/>
 > **Datatyp:**	sträng
 
 ---
@@ -422,59 +422,34 @@ Arkivpaketet i sin helhet utformas i enlighet med Riksarkivets specifikation
 # Exempel på JSON-fil
 ```json
 {
-"leveransfil": "test",
-"startdatum": "test",
-"slutdatum": "test",
-"arkivbildare": "test",
-"arkivbildare_id": "test",
-"ansvarig_enhet": "test",
-"ansvarig_enhet_id": "test",
-"leveransfil": "test",
-"leveransfil": "test",
-"leveransfil": "test",
-"leveransfil": "test",
-"leveransfil": "test",
-"leveransfil": "test",
-"leveransfil": "test",
-"leveransfil": "test",
-"leveransfil": "test",
-"leveransfil": "test",
-"leveransfil": "test",
-"leveransfil": "test",
-"leveransfil": "test",
-"leveransfil": "test",
-"leveransfil": "test",
-"leveransfil": "test",
-"leveransfil": "test",
-"leveransfil": "test",
-"leveransfil": "test",
-"leveransfil": "test",
-"leveransfil": "test",
-"leveransfil": "test",
-"leveransfil": "test",
-"leveransfil": "test",
-"leveransfil": "test",
-"leveransfil": "test",
-"leveransfil": "test",
-"leveransfil": "test",
-"leveransfil": "test",
-"leveransfil": "test",
-"leveransfil": "test",
-"leveransfil": "test",
-"leveransfil": "test",
-"leveransfil": "test",
-"leveransfil": "test",
-"leveransfil": "test",
-"leveransfil": "test",
-"leveransfil": "test",
-"leveransfil": "test",
-"leveransfil": "test",
-"leveransfil": "test",
-"leveransfil": "test",
-"leveransfil": "test",
-"leveransfil": "test",
-"leveransfil": "test",
-"leveransfil": "test",
+"leveransfil": "p360_36c0954c-dcc5-42aa-9e95-a7f199d5bdaf.zip",
+"startdatum": "2023-01-01T00:00:00",
+"slutdatum": "2023-12-31T00:00:00",
+"arkivbildare": "Sunne församling",
+"arkivbildare_id": "2520020674",
+"nivå": "lokal",
+"ansvarig_enhet": "Sunne pastorat",
+"ansvarig_enhet_id": "2520037173",
+"bidragande_organisation": "Konsultföretaget AB",
+"informationsägare": "Sunne pastorat",
+"informationsägare_id": "2520037173",
+"bevarande_enhet": "Kyrkostyrelsen, Dokument och Arkiv",
+"bevarandesystem": "ESSArch",
+"bevarandesystem_version": "2.0",
+"levererande_system": "Public 360",
+"levererande_system_version": "2.0",
+"leveransöverenskommelse": "KS 2023-4045",
+"leveransöverenskommelse_essarch": "ERMS_VIPS",
+"arkiv": " Församlingsarkiv för Sunne församling",
+"beståndskod": "SE/SVK/0976/0003",
+"klassificeringsstruktur": " KlassL_0.1_2022",
+"klassificeringsstruktur_enhet": "2.2.1",
+"förteckningsplan": "Förteckningsplan Lokal nivå 2022",
+"förteckningsplan_enhet": "D1b",
+"informationstyp": "ERMS",
+"anpassad_informationstyp": "SvKGS-Ärendehandlingar",
+"gallring": "No",
+"sekretess": "Secrecy"
 }
 ```
 
