@@ -421,36 +421,38 @@ Arkivpaketet i sin helhet utformas i enlighet med Riksarkivets specifikation
 
 # Exempel på JSON-fil
 ```json
-{
-"leveransfil": "p360_36c0954c-dcc5-42aa-9e95-a7f199d5bdaf.zip",
-"startdatum": "2023-01-01T00:00:00",
-"slutdatum": "2023-12-31T00:00:00",
-"arkivbildare": "Sunne församling",
-"arkivbildare_id": "2520020674",
-"nivå": "lokal",
-"ansvarig_enhet": "Sunne pastorat",
-"ansvarig_enhet_id": "2520037173",
-"bidragande_organisation": "Konsultföretaget AB",
-"informationsägare": "Sunne pastorat",
-"informationsägare_id": "2520037173",
-"bevarande_enhet": "Kyrkostyrelsen, Dokument och Arkiv",
-"bevarandesystem": "ESSArch",
-"bevarandesystem_version": "2.0",
-"levererande_system": "Public 360",
-"levererande_system_version": "2.0",
-"leveransöverenskommelse": "KS 2023-4045",
-"leveransöverenskommelse_essarch": "ERMS_VIPS",
-"arkiv": " Församlingsarkiv för Sunne församling",
-"beståndskod": "SE/SVK/0976/0003",
-"klassificeringsstruktur": " KlassL_0.1_2022",
-"klassificeringsstruktur_enhet": "2.2.1",
-"förteckningsplan": "Förteckningsplan Lokal nivå 2022",
-"förteckningsplan_enhet": "D1b",
-"informationstyp": "ERMS",
-"anpassad_informationstyp": "SvKGS-Ärendehandlingar",
-"gallring": "No",
-"sekretess": "Secrecy"
-}
+[
+  {
+  "leveransfil": "p360_36c0954c-dcc5-42aa-9e95-a7f199d5bdaf.zip",
+  "startdatum": "2023-01-01T00:00:00",
+  "slutdatum": "2023-12-31T00:00:00",
+  "arkivbildare": "Sunne församling",
+  "arkivbildare_id": "2520020674",
+  "nivå": "lokal",
+  "ansvarig_enhet": "Sunne pastorat",
+  "ansvarig_enhet_id": "2520037173",
+  "bidragande_organisation": "Konsultföretaget AB",
+  "informationsägare": "Sunne pastorat",
+  "informationsägare_id": "2520037173",
+  "bevarande_enhet": "Kyrkostyrelsen, Dokument och Arkiv",
+  "bevarandesystem": "ESSArch",
+  "bevarandesystem_version": "2.0",
+  "levererande_system": "Public 360",
+  "levererande_system_version": "2.0",
+  "leveransöverenskommelse": "KS 2023-4045",
+  "leveransöverenskommelse_essarch": "ERMS_VIPS",
+  "arkiv": " Församlingsarkiv för Sunne församling",
+  "beståndskod": "SE/SVK/0976/0003",
+  "klassificeringsstruktur": " KlassL_0.1_2022",
+  "klassificeringsstruktur_enhet": "2.2.1",
+  "förteckningsplan": "Förteckningsplan Lokal nivå 2022",
+  "förteckningsplan_enhet": "D1b",
+  "informationstyp": "ERMS",
+  "anpassad_informationstyp": "SvKGS-Ärendehandlingar",
+  "gallring": "No",
+  "sekretess": "Secrecy"
+  }
+]
 ```
 
 
