@@ -47,41 +47,112 @@ Arkivpaketet i sin helhet utformas i enlighet med Riksarkivets specifikation
 
 
 
-# 3. Dataelement med exempel
+# 3. Leveransspecifikation
 
-## 3.1. Övergripande information om XML-dokumentet
+## *leveransfil*
 
-Kontroll är ett obligatoriskt element som beskriver själva XML-filen och vad den innehåller.
-Den underlättare förståelsen av informationen, om XML-filen skulle separeras från arkivpaketet.
+> Obligatoriskt.
 
-### Elementlista 1. Kontroll
+> Namnet på den ZIP-fil som innehåller arkivleveransen. Hur namnet ska utformas bestäms i leveransöverenskommelsen.
+> Namnet behöver vara unikt och det måste finnas en komponent som identifierar det levererande IT-systemet.
+ 
+> **Exempel:** p360_36c0954c-dcc5-42aa-9e95-a7f199d5bdaf.zip
 
----
-
-#### ERMS-SVK:1 - *Identifikator*
-
-(ERMS1)
-
-> Identifierar ERMS-dokumentet
-
-> Obligatoriskt. Elementet får upprepas.
-
-> Tre identifikatorer måste användas: arkivbildarens namn och id samt ärendets nummer. Se exempel nedan.
-
-> **XML-element:**	`identification`<br/>
-> **Datatyp:**	string
+> **Nyckel:**	`leveransfil`<br/>
+> **Datatyp:**	sträng
 
 ---
 
-#### ERMS-SVK:2 - *Typ av identifikator*
+## *Startdatum*
 
-(ERMS2)
+> Obligatoriskt.
 
-> Beskrivning av identifikatorn.
+> Startdatum för den levererade informationen i leveransfilen. Datumet anges i formatet xs:dateTime (enligt [W3C XML Schema Definition Language](https://www.w3.org/TR/xmlschema11-2/)).
 
-> Obligatoriskt. Värdet väljs från [Värdelista 1](ERMS-SVK-ARENDE-vardelistor.md#erms-svk-arende-v%C3%A4rdelista-1---typ-av-identifikator).
+ 
+> **Exempel:** 2023-01-01T00:00:00
 
-> **XML-element:**	`identification/@identificationType`<br/>
-> **Datatyp:**	string
+> **Nyckel:**	`startdatum`<br/>
+> **Datatyp:**	sträng
+
+---
+
+## *Slutdatum*
+
+> Obligatoriskt.
+
+> Slutdatum för den levererade informationen i leveransfilen. Datumet anges i formatet xs:dateTime (enligt [W3C XML Schema Definition Language](https://www.w3.org/TR/xmlschema11-2/)).
+
+ 
+> **Exempel:** 2023-01-01T00:00:00
+
+> **Nyckel:**	`startdatum`<br/>
+> **Datatyp:**	sträng
+
+---
+
+## *Arkivbildare*
+
+> Obligatoriskt.
+
+> Namnet på arkivbildaren för den levererade informationen. Namnet måste finnas Svenska kyrkans gemensamma arkivredovisning.
+
+ 
+> **Exempel:** Sunne församling
+
+> **Nyckel:**	`arkivbildare`<br/>
+> **Datatyp:**	sträng
+
+---
+
+## *Arkivbildarens ID*
+
+> Obligatoriskt.
+
+> En identifikator för arkivbildaren, i regel organisationsnummer (utan bindestreck). Identifikatorn måste finnas i Svenska kyrkans gemensamma arkivredovisning.
+ 
+> **Exempel:** 2520020674
+
+> **Nyckel:**	`arkivbildare_id`<br/>
+> **Datatyp:**	sträng
+
+---
+
+## *Ansvarig enhet*
+
+> Obligatoriskt.
+
+> Namnet på den kyrkliga enhet eller organsiation som ansvarar för leveransen.
+ 
+> **Exempel:** Sunne pastorat
+
+> **Nyckel:**	`ansvarig_enhet`<br/>
+> **Datatyp:**	sträng
+
+---
+
+## *Ansvarig enhets ID*
+
+> Obligatoriskt.
+
+> En identifikator för den kyrkliga enhet eller organisation som ansvarar för leveransen, i regel organisationsnummer (utan bindestreck).
+ 
+> **Exempel:** 2520037173
+
+> **Nyckel:**	`ansvarig_enhet_id`<br/>
+> **Datatyp:**	sträng
+
+---
+
+## *Bidragande organisation*
+
+> Inte obligatoriskt.
+
+> Namn på t.ex. konsultföretag som
+ 
+> **Exempel:** 2520037173
+
+> **Nyckel:**	`ansvarig_enhet_id`<br/>
+> **Datatyp:**	sträng
 
 ---
