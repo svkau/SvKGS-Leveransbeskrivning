@@ -86,7 +86,7 @@ Arkivpaketet i sin helhet utformas i enlighet med Riksarkivets specifikation
  
 > **Exempel:** 2023-01-01T00:00:00
 
-> **Nyckel:**	`startdatum`<br/>
+> **Nyckel:**	`slutdatum`<br/>
 > **Datatyp:**	sträng
 
 ---
@@ -95,7 +95,7 @@ Arkivpaketet i sin helhet utformas i enlighet med Riksarkivets specifikation
 
 > Obligatoriskt.
 
-> Namnet på arkivbildaren för den levererade informationen. Namnet måste finnas Svenska kyrkans gemensamma arkivredovisning.
+> Namnet på arkivbildaren för den levererade informationen. Namnet måste finnas i Svenska kyrkans gemensamma arkivredovisning.
 
  
 > **Exempel:** Sunne församling
@@ -114,6 +114,19 @@ Arkivpaketet i sin helhet utformas i enlighet med Riksarkivets specifikation
 > **Exempel:** 2520020674
 
 > **Nyckel:**	`arkivbildare_id`<br/>
+> **Datatyp:**	sträng
+
+---
+
+## *Nivå*
+
+> Obligatoriskt.
+
+> Den kyrkoorganisatoriska nivå som arkivbildaren tillhör. Värdet kan vara antingen "lokal", "regional" eller "nationell".
+ 
+> **Exempel:** lokal
+
+> **Nyckel:**	`nivå`<br/>
 > **Datatyp:**	sträng
 
 ---
@@ -148,7 +161,33 @@ Arkivpaketet i sin helhet utformas i enlighet med Riksarkivets specifikation
 
 > Inte obligatoriskt.
 
-> Namn på t.ex. konsultföretag som
+> Namn på t.ex. konsultföretag som har hjälpt till att skapa uttag för arkivering.
+ 
+> **Exempel:** Konsultföretaget AB
+
+> **Nyckel:**	`bidragande_organisation`<br/>
+> **Datatyp:**	sträng
+
+---
+
+## *Informationsägare*
+
+> Obligatoriskt.
+
+> Namn på den kyrkliga enhet som har arkivansvar fär den levererade informationen. Namnet måste finnas i Svenska kyrkans gemensamma arkivredovisning.
+ 
+> **Exempel:** Sunne pastorat
+
+> **Nyckel:**	`informationsägare`<br/>
+> **Datatyp:**	sträng
+
+---
+
+## *Informationsägares ID*
+
+> Obligatoriskt.
+
+> En identifikator för den kyrkliga enhet som har arkivansvar för den levererade informationen, i regel organisationsnummer (utan bindestreck).
  
 > **Exempel:** 2520037173
 
@@ -156,3 +195,288 @@ Arkivpaketet i sin helhet utformas i enlighet med Riksarkivets specifikation
 > **Datatyp:**	sträng
 
 ---
+
+## *Bevarande enhet*
+
+> Obligatoriskt.
+
+> Namn på den enhet eller organisation som tar emot leveransen och ansvarar för bevarandet. I regel är detta alltid "Kyrkostyrelsen, Dokument och Arkiv".
+ 
+> **Exempel:** Kyrkostyrelsen, Dokument och Arkiv
+
+> **Nyckel:**	`bevarande_enhet`<br/>
+> **Datatyp:**	sträng
+
+---
+
+## *Bevarandesystem*
+
+> Obligatoriskt.
+
+> Namn på IT-system eller teknisk plattform som används för att ta emot och bevara aktuell leverans.
+ 
+> **Exempel:** ESSArch
+
+> **Nyckel:**	`bevarandessytem`<br/>
+> **Datatyp:**	sträng
+
+---
+
+## *Version av bevarandesystemet*
+
+> Obligatoriskt.
+
+> Bevarandesystemets versionsnummer.
+ 
+> **Exempel:** 2.0
+
+> **Nyckel:**	`bevarandessytem`<br/>
+> **Datatyp:**	sträng
+
+---
+
+## *Levererande system*
+
+> Obligatoriskt.
+
+> Namn på det IT-system som den levererade informationen har hämtats från, källsystemet.
+ 
+> **Exempel:** Public 360
+
+> **Nyckel:**	`levererande_system`<br/>
+> **Datatyp:**	sträng
+
+---
+
+## *Versions av det levererande systemet*
+
+> Obligatoriskt.
+
+> Levererande systems versionsnummer.
+ 
+> **Exempel:** 2.0
+
+> **Nyckel:**	`levererande_system_version`<br/>
+> **Datatyp:**	sträng
+
+---
+
+## *Leveransöverenskommelse*
+
+> Obligatoriskt.
+
+> Hänvisning till leveransöverenskommelse som gäller för aktuell leverans. I regel anges här ett ärendenummer i kyrkostyrelsens diarium.
+ 
+> **Exempel:** KS 2023-0045
+
+> **Nyckel:**	`leveransöverenskommelse`<br/>
+> **Datatyp:**	sträng
+
+---
+
+## *Teknisk leveransöverenskommelse*
+
+> Obligatoriskt.
+
+> Hänvisning till leveransöverenskommelse som har specificerats i Svenska kyrkans gemensamma e-arkiv. Värdet måste vara namnet på en i ESSArch befintlig leveransöverenskommelse.
+ 
+> **Exempel:** ERMS_VIPS
+
+> **Nyckel:**	`leveransöverenskommelse_essarch`<br/>
+> **Datatyp:**	sträng
+
+---
+
+## *Arkiv*
+
+> Obligatoriskt.
+
+> Namn på det arkiv som den levererade informationen tillhör. Namnet måste finnas i Svenska kyrkans gemensamma arkivredovisning.
+ 
+> **Exempel:** Församlingsarkiv för Sunne församling
+
+> **Nyckel:**	`arkiv`<br/>
+> **Datatyp:**	sträng
+
+---
+
+## *Beståndskod*
+
+> Obligatoriskt.
+
+> Arkivets referenskod eller annat ID. Beståndskoden måste finnas i Svenska kyrkans gemensamma arkivredovisning.
+ 
+> **Exempel:** SE/SVK/0976/0003
+
+> **Nyckel:**	`beståndskod`<br/>
+> **Datatyp:**	sträng
+
+---
+
+## *Klassificeringsstruktur*
+
+> Obligatoriskt.
+
+> Namn och version på den klassificeringsstruktur som är giltig för leveransen. Värdet måste vara en hänvisning till en klassificeringsstruktur som finns i Svenska kyrkans gemensamma arkivredovining.
+ 
+> **Exempel:** KlassL_0.1_2022
+
+> **Nyckel:**	`klassificeringsstruktur`<br/>
+> **Datatyp:**	sträng
+
+---
+
+## *Enhet i klassificeringsstruktur*
+
+> Obligatoriskt.
+
+> Namn på den enhet (process) i klassificeringsstrukturen som gäller för leveransen. Värdet måste vara en hänvisning till en enhet i en klassificeringsstruktur som finns i Svenska kyrkans gemensamma arkivredovining.
+ 
+> **Exempel:** 2.2.1
+
+> **Nyckel:**	`klassificeringsstruktur_enhet`<br/>
+> **Datatyp:**	sträng
+
+---
+
+## *Förteckningsplan*
+
+> Obligatoriskt.
+
+> Namn och version på den förteckningsplan som är giltig för leveransen. Värdet måste vara en hänvisning till en förteckningsplan som finns i Svenska kyrkans gemensamma arkivredovining.
+ 
+> **Exempel:** Förteckningsplan Lokal nivå 2022
+
+> **Nyckel:**	`förteckningsplan`<br/>
+> **Datatyp:**	sträng
+
+---
+
+## *Enhet i förteckningsplan*
+
+> Obligatoriskt.
+
+> Namn och version på den enhet (förvaringsenhet) i förteckningsplanen som är giltig för leveransen. Värdet måste vara en hänvisning till en enhet i en förteckningsplan som finns i Svenska kyrkans gemensamma arkivredovining.
+ 
+> **Exempel:** D1b
+
+> **Nyckel:**	`förteckningsplan_enhet`<br/>
+> **Datatyp:**	sträng
+
+---
+
+## *Informationstyp*
+
+> Obligatoriskt.
+
+> Övergripande informationstypsspecifikation. Detta måste vara en specifikation som är giltig i Svenska kyrkans gemensamma e-arkiv.
+ 
+> **Exempel:** ERMS
+
+> **Nyckel:**	`informationstyp`<br/>
+> **Datatyp:**	sträng
+
+---
+
+## *Anpassad informationstyp*
+
+> Obligatoriskt.
+
+> Anpassad informationstyp för Svenska kyrkan. Detta måste vara en informationstyp som är giltig i Svenska kyrkans gemensamma e-arkiv.
+ 
+> **Exempel:** SvKGS-Ärendehandlingar
+
+> **Nyckel:**	`anpassad_informationstyp`<br/>
+> **Datatyp:**	sträng
+
+---
+
+## *Gallring*
+
+> Inte obligatoriskt.
+
+> Anger om leveransen (i dess helhet) är gallringsbar. Giltiga värden är "Yes" eller "No".
+>
+> Om detta värde utelämnas i JSON-filen anses det betyda att värdet är "No".  E-arkivet tar i regel inte emot gallringsbar information.
+ 
+> **Exempel:** No
+
+> **Nyckel:**	`gallring`<br/>
+> **Datatyp:**	sträng
+
+---
+
+## *Sekretess*
+
+> Inte obbligatoriskt.
+
+> Anger om leveransen innehåller information som kan omfattas av sekretess eller GDPR. Giltiga värden är "Secrecy" eller "GDPR".
+>
+> Om ingen sekretess eller GDPR föreligger, utelämnas värdet i JSON-filen.
+ 
+> **Exempel:** Secrecy
+
+> **Nyckel:**	`sekretess`<br/>
+> **Datatyp:**	sträng
+
+# Exempel på JSON-fil
+```json
+{
+"leveransfil": "test",
+"startdatum": "test",
+"slutdatum": "test",
+"arkivbildare": "test",
+"arkivbildare_id": "test",
+"ansvarig_enhet": "test",
+"ansvarig_enhet_id": "test",
+"leveransfil": "test",
+"leveransfil": "test",
+"leveransfil": "test",
+"leveransfil": "test",
+"leveransfil": "test",
+"leveransfil": "test",
+"leveransfil": "test",
+"leveransfil": "test",
+"leveransfil": "test",
+"leveransfil": "test",
+"leveransfil": "test",
+"leveransfil": "test",
+"leveransfil": "test",
+"leveransfil": "test",
+"leveransfil": "test",
+"leveransfil": "test",
+"leveransfil": "test",
+"leveransfil": "test",
+"leveransfil": "test",
+"leveransfil": "test",
+"leveransfil": "test",
+"leveransfil": "test",
+"leveransfil": "test",
+"leveransfil": "test",
+"leveransfil": "test",
+"leveransfil": "test",
+"leveransfil": "test",
+"leveransfil": "test",
+"leveransfil": "test",
+"leveransfil": "test",
+"leveransfil": "test",
+"leveransfil": "test",
+"leveransfil": "test",
+"leveransfil": "test",
+"leveransfil": "test",
+"leveransfil": "test",
+"leveransfil": "test",
+"leveransfil": "test",
+"leveransfil": "test",
+"leveransfil": "test",
+"leveransfil": "test",
+"leveransfil": "test",
+"leveransfil": "test",
+"leveransfil": "test",
+"leveransfil": "test",
+"leveransfil": "test",
+}
+```
+
+
+
