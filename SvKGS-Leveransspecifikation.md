@@ -421,8 +421,7 @@ Arkivpaketet i sin helhet utformas i enlighet med Riksarkivets specifikation
 
 # Exempel på JSON-fil
 ```json
-[
-  {
+{
   "leveransfil": "p360_36c0954c-dcc5-42aa-9e95-a7f199d5bdaf.zip",
   "startdatum": "2023-01-01T00:00:00",
   "slutdatum": "2023-12-31T00:00:00",
@@ -451,8 +450,7 @@ Arkivpaketet i sin helhet utformas i enlighet med Riksarkivets specifikation
   "anpassad_informationstyp": "SvKGS-Ärendehandlingar",
   "gallring": "No",
   "sekretess": "Secrecy"
-  }
-]
+}
 ```
 
 
