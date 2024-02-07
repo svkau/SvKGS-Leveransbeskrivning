@@ -47,7 +47,7 @@ Arkivpaketet i sin helhet utformas i enlighet med Riksarkivets specifikation
 
 
 
-# 3. Leveransspecifikation
+# 3. Leveransbeskrivning
 
 ## *leveransfil*
 
