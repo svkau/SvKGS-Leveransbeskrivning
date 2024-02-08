@@ -6,121 +6,121 @@
 	"type": "object",
 	"properties": {
 		"leveransfil": {
-			"description": "Beskrivning här",
+			"description": "Namnet på den ZIP-fil som innehåller arkivleveransen.",
 			"type": "string"
 		},
 		"startdatum": {
-			"description": "Beskrivning här",
+			"description": "Startdatum för den levererade informationen i leveransfilen.",
 			"type": "string",
 			"pattern": "^[0-9]{4}-(((0[13578]|(10|12))-(0[1-9]|[1-2][0-9]|3[0-1]))|(02-(0[1-9]|[1-2][0-9]))|((0[469]|11)-(0[1-9]|[1-2][0-9]|30)))T(2[0-3]|[01][0-9]):?([0-5][0-9]):?([0-5][0-9])"
 		},
 		"slutdatum": {
-			"description": "Beskrivning här",
+			"description": "Slutdatum för den levererade informationen i leveransfilen.",
 			"type": "string",
 			"pattern": "^[0-9]{4}-(((0[13578]|(10|12))-(0[1-9]|[1-2][0-9]|3[0-1]))|(02-(0[1-9]|[1-2][0-9]))|((0[469]|11)-(0[1-9]|[1-2][0-9]|30)))T(2[0-3]|[01][0-9]):?([0-5][0-9]):?([0-5][0-9])"
 		},
 		"arkivbildare": {
-			"description": "Beskrivning här",
+			"description": "Namnet på arkivbildaren för den levererade informationen.",
 			"type": "string"
 		},
 		"arkivbildare_id": {
-			"description": "Beskrivning här",
+			"description": "En identifikator för arkivbildaren.",
 			"type": "string"
 		},
 		"nivå": {
-			"description": "Beskrivning här",
+			"description": "Den kyrkoorganisatoriska nivå som arkivbildaren tillhör.",
 			"type": "string",
 			"enum": ["lokal", "regional", "nationell"]
 		},
 		"ansvarig_enhet": {
-			"description": "Beskrivning här",
+			"description": "Namnet på den kyrkliga enhet eller organsiation som ansvarar för leveransen.",
 			"type": "string"
 		},
 		"ansvarig_enhet_id": {
-			"description": "Beskrivning här",
+			"description": "En identifikator för den kyrkliga enhet eller organisation som ansvarar för leveransen.",
 			"type": "string"
 		},
 		"bidragande_organisation": {
-			"description": "Beskrivning här",
+			"description": "Namn på t.ex. konsultföretag som har hjälpt till att skapa uttag för arkivering.",
 			"type": "string"
 		},
 		"informationsägare": {
-			"description": "Beskrivning här",
+			"description": "Namn på den kyrkliga enhet som har arkivansvar fär den levererade informationen.",
 			"type": "string"
 		},
 		"informationsägare_id": {
-			"description": "Beskrivning här",
+			"description": "En identifikator för den kyrkliga enhet som har arkivansvar för den levererade informationen.",
 			"type": "string"
 		},
 		"bevarande_enhet": {
-			"description": "Beskrivning här",
+			"description": "Namn på den enhet eller organisation som tar emot leveransen och ansvarar för bevarandet.",
 			"type": "string",
 			"enum": ["Kyrkostyrelsen, Dokument och Arkiv"]
 		},
 		"bevarandesystem": {
-			"description": "Beskrivning här",
+			"description": "Namn på IT-system eller teknisk plattform som används för att ta emot och bevara aktuell leverans.",
 			"type": "string",
 			"enum": ["ESSArch"]
 		},
 		"bevarandesystem_version": {
-			"description": "Beskrivning här",
+			"description": "Bevarandesystemets versionsnummer.",
 			"type": "string"
 		},
 		"levererande_system": {
-			"description": "Beskrivning här",
+			"description": "Namn på det IT-system som den levererade informationen har hämtats från, källsystemet.",
 			"type": "string"
 		},
 		"levererande_system_version": {
-			"description": "Beskrivning här",
+			"description": "Levererande systems versionsnummer.",
 			"type": "string"
 		},
 		"leveransöverenskommelse": {
-			"description": "Beskrivning här",
+			"description": "Hänvisning till leveransöverenskommelse som gäller för aktuell leverans.",
 			"type": "string"
 		},
 		"leveransöverenskommelse_essarch": {
-			"description": "Beskrivning här",
+			"description": "Hänvisning till leveransöverenskommelse som har specificerats i Svenska kyrkans gemensamma e-arkiv.",
 			"type": "string"
 		},
 		"arkiv": {
-			"description": "Beskrivning här",
+			"description": "Namn på det arkiv som den levererade informationen tillhör.",
 			"type": "string"
 		},
 		"beståndskod": {
-			"description": "Beskrivning här",
+			"description": "Arkivets referenskod eller annat ID",
 			"type": "string"
 		},
 		"klassificeringsstruktur": {
-			"description": "Beskrivning här",
+			"description": "Namn och version på den klassificeringsstruktur som är giltig för leveransen.",
 			"type": "string"
 		},
 		"klassificeringsstruktur_enhet": {
-			"description": "Beskrivning här",
+			"description": "Namn på den enhet (process) i klassificeringsstrukturen som gäller för leveransen.",
 			"type": "string"
 		},
 		"förteckningsplan": {
-			"description": "Beskrivning här",
+			"description": "Namn och version på den förteckningsplan som är giltig för leveransen.",
 			"type": "string"
 		},
 		"förteckningsplan_enhet": {
-			"description": "Beskrivning här",
+			"description": "Namn och version på den enhet (förvaringsenhet) i förteckningsplanen som är giltig för leveransen.",
 			"type": "string"
 		},
 		"informationstyp": {
-			"description": "Beskrivning här",
+			"description": "Övergripande informationstypsspecifikation.",
 			"type": "string"
 		},
 		"anpassad_informationstyp": {
-			"description": "Beskrivning här",
+			"description": "Anpassad informationstyp för Svenska kyrkan.",
 			"type": "string"
 		},
 		"gallring": {
-			"description": "Beskrivning här",
+			"description": "Anger om leveransen (i dess helhet) är gallringsbar.",
 			"type": "string",
 			"enum": ["Yes", "No"]
 		},
 		"sekretess": {
-			"description": "Beskrivning här",
+			"description": "Anger om leveransen innehåller information som kan omfattas av sekretess eller GDPR.",
 			"type": "string",
 			"enum": ["Secrecy", "GDPR"]
 		}
