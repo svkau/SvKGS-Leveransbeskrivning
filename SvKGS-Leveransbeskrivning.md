@@ -356,7 +356,7 @@ Arkivpaketet i sin helhet utformas i enlighet med Riksarkivets specifikation
 
 > Obligatoriskt.
 
-> Namn och version på den enhet (förvaringsenhet) i förteckningsplanen som är giltig för leveransen. Värdet måste vara en hänvisning till en enhet i en förteckningsplan som finns i Svenska kyrkans gemensamma arkivredovining.
+> Namn på den enhet (förvaringsenhet) i förteckningsplanen som är giltig för leveransen. Värdet måste vara en hänvisning till en enhet i en förteckningsplan som finns i Svenska kyrkans gemensamma arkivredovining.
  
 > **Exempel:** D1b
 
