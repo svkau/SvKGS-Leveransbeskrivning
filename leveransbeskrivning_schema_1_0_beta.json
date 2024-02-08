@@ -1,0 +1,158 @@
+{
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"$id": "https://xml.svenskakyrkan.se/leveransbeskrivning/leveransbeskrivning_schema_1_0_beta.json",
+	"title": "Leveransbeskrivning",
+	"description": "Metadata om levererad information från IT-system till Svenska kyrkans gemensamma e-arkiv",
+	"type": "object",
+	"properties": {
+		"leveransfil": {
+			"description": "Beskrivning här",
+			"type": "string"
+		},
+		"startdatum": {
+			"description": "Beskrivning här",
+			"type": "string",
+			"pattern": "^[0-9]{4}-(((0[13578]|(10|12))-(0[1-9]|[1-2][0-9]|3[0-1]))|(02-(0[1-9]|[1-2][0-9]))|((0[469]|11)-(0[1-9]|[1-2][0-9]|30)))T(2[0-3]|[01][0-9]):?([0-5][0-9]):?([0-5][0-9])"
+		},
+		"slutdatum": {
+			"description": "Beskrivning här",
+			"type": "string",
+			"pattern": "^[0-9]{4}-(((0[13578]|(10|12))-(0[1-9]|[1-2][0-9]|3[0-1]))|(02-(0[1-9]|[1-2][0-9]))|((0[469]|11)-(0[1-9]|[1-2][0-9]|30)))T(2[0-3]|[01][0-9]):?([0-5][0-9]):?([0-5][0-9])"
+		},
+		"arkivbildare": {
+			"description": "Beskrivning här",
+			"type": "string"
+		},
+		"arkivbildare_id": {
+			"description": "Beskrivning här",
+			"type": "string"
+		},
+		"nivå": {
+			"description": "Beskrivning här",
+			"type": "string",
+			"enum": ["lokal", "regional", "nationell"]
+		},
+		"ansvarig_enhet": {
+			"description": "Beskrivning här",
+			"type": "string"
+		},
+		"ansvarig_enhet_id": {
+			"description": "Beskrivning här",
+			"type": "string"
+		},
+		"bidragande_organisation": {
+			"description": "Beskrivning här",
+			"type": "string"
+		},
+		"informationsägare": {
+			"description": "Beskrivning här",
+			"type": "string"
+		},
+		"informationsägare_id": {
+			"description": "Beskrivning här",
+			"type": "string"
+		},
+		"bevarande_enhet": {
+			"description": "Beskrivning här",
+			"type": "string",
+			"enum": ["Kyrkostyrelsen, Dokument och Arkiv"]
+		},
+		"bevarandesystem": {
+			"description": "Beskrivning här",
+			"type": "string",
+			"enum": ["ESSArch"]
+		},
+		"bevarandesystem_version": {
+			"description": "Beskrivning här",
+			"type": "string"
+		},
+		"levererande_system": {
+			"description": "Beskrivning här",
+			"type": "string"
+		},
+		"levererande_system_version": {
+			"description": "Beskrivning här",
+			"type": "string"
+		},
+		"leveransöverenskommelse": {
+			"description": "Beskrivning här",
+			"type": "string"
+		},
+		"leveransöverenskommelse_essarch": {
+			"description": "Beskrivning här",
+			"type": "string"
+		},
+		"arkiv": {
+			"description": "Beskrivning här",
+			"type": "string"
+		},
+		"beståndskod": {
+			"description": "Beskrivning här",
+			"type": "string"
+		},
+		"klassificeringsstruktur": {
+			"description": "Beskrivning här",
+			"type": "string"
+		},
+		"klassificeringsstruktur_enhet": {
+			"description": "Beskrivning här",
+			"type": "string"
+		},
+		"förteckningsplan": {
+			"description": "Beskrivning här",
+			"type": "string"
+		},
+		"förteckningsplan_enhet": {
+			"description": "Beskrivning här",
+			"type": "string"
+		},
+		"informationstyp": {
+			"description": "Beskrivning här",
+			"type": "string"
+		},
+		"anpassad_informationstyp": {
+			"description": "Beskrivning här",
+			"type": "string"
+		},
+		"gallring": {
+			"description": "Beskrivning här",
+			"type": "string",
+			"enum": ["Yes", "No"]
+		},
+		"sekretess": {
+			"description": "Beskrivning här",
+			"type": "string",
+			"enum": ["Secrecy", "GDPR"]
+		}
+		
+		
+	},
+	"required": [
+		"leveransfil",
+		"startdatum",
+		"slutdatum",
+		"arkivbildare",
+		"arkivbildare_id",
+		"nivå",
+		"ansvarig_enhet",
+		"ansvarig_enhet_id",
+		"informationsägare",
+		"informationsägare_id",
+		"bevarande_enhet",
+		"bevarandesystem",
+		"bevarandesystem_version",
+		"levererande_system",
+		"levererande_system_version",
+		"leveransöverenskommelse",
+		"leveransöverenskommelse_essarch",
+		"arkiv",
+		"beståndskod",
+		"klassificeringsstruktur",
+		"klassificeringsstruktur_enhet",
+		"förteckningsplan",
+		"förteckningsplan_enhet",
+		"informationstyp",
+		"anpassad_informationstyp"
+	]
+
+}
