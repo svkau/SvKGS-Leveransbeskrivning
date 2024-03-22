@@ -63,6 +63,30 @@ Arkivpaketet i sin helhet utformas i enlighet med Riksarkivets specifikation
 
 ---
 
+## *Kontrollsumma*
+
+> Obligatoriskt.
+
+> Beräknad kontrollsumma för aktuell **Leveransfil** (ZIP-fil). 
+
+> **Nyckel:**	`kontrollsumma`<br/>
+> **Datatyp:**	sträng
+
+---
+
+## *Algoritm*
+
+> Obligatoriskt.
+
+> Den algoritm som har använts för att beräkna **Kontrollsumma**.
+
+> **Exempel:** SHA256
+
+> **Nyckel:**	`algoritm`<br/>
+> **Datatyp:**	sträng
+
+---
+
 ## *Startdatum*
 
 > Obligatoriskt.
