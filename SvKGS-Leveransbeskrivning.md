@@ -476,6 +476,8 @@ Arkivpaketet i sin helhet utformas i enlighet med Riksarkivets specifikation
   "sekretess": "Secrecy"
 }
 ```
+## Leveranspaket
 
+![leveranspaket](https://github.com/svkau/SvKGS-Leveransbeskrivning/assets/13225565/c5ee3f0b-78dd-4df4-a3d3-080b6b9e222c)
 
 
