@@ -158,6 +158,32 @@ Beskrivningen ska vara en JSON-fil med samma namn som ZIP-filen (men med filänd
 
 ---
 
+### *Arkivbildarens IT-system: Namn*
+
+> Obligatoriskt.
+
+> Namn på det IT-system som leveransen kommer ifrån ("källsystemet").
+ 
+> **Exempel:** Public 360
+
+> **Nyckel:**	`arkivbildare_system`<br/>
+> **Datatyp:**	sträng
+
+---
+
+### *Arkivbildarens IT-system: Version*
+
+> Obligatoriskt.
+
+> Version för det IT-system som leveransen kommer ifrån ("källsystemet").
+ 
+> **Exempel:** 5.17
+
+> **Nyckel:**	`arkivbildare_system_version`<br/>
+> **Datatyp:**	sträng
+
+---
+
 ### *Nivå*
 
 > Obligatoriskt.
