@@ -9,6 +9,14 @@
 			"description": "Namnet på den ZIP-fil som innehåller arkivleveransen.",
 			"type": "string"
 		},
+		"kontrollsumma": {
+			"description": "Beräknad kontrollsumma för aktuell Leveransfil (ZIP-filen).",
+			"type": "string"
+		},
+		"algoritm": {
+			"description": "Den algoritm som har använts för att beräkna Kontrollsumma.",
+			"type": "string"
+		},
 		"startdatum": {
 			"description": "Startdatum för den levererade informationen i leveransfilen.",
 			"type": "string",
@@ -25,6 +33,14 @@
 		},
 		"arkivbildare_id": {
 			"description": "En identifikator för arkivbildaren.",
+			"type": "string"
+		},
+		"arkivbildare_system": {
+			"description": "Namn på det IT-system som leveransen kommer ifrån.",
+			"type": "string"
+		},
+		"arkivbildare_system_version": {
+			"description": "Version för det IT-system som leveransen kommer ifrån..",
 			"type": "string"
 		},
 		"nivå": {
@@ -60,18 +76,10 @@
 		"bevarandesystem": {
 			"description": "Namn på IT-system eller teknisk plattform som används för att ta emot och bevara aktuell leverans.",
 			"type": "string",
-			"enum": ["ESSArch"]
+			"enum": ["ES Solutions, ESSArch"]
 		},
 		"bevarandesystem_version": {
 			"description": "Bevarandesystemets versionsnummer.",
-			"type": "string"
-		},
-		"levererande_system": {
-			"description": "Namn på det IT-system som den levererade informationen har hämtats från, källsystemet.",
-			"type": "string"
-		},
-		"levererande_system_version": {
-			"description": "Levererande systems versionsnummer.",
 			"type": "string"
 		},
 		"leveransöverenskommelse": {
@@ -115,17 +123,23 @@
 			"type": "string"
 		},
 		"gallring": {
-			"description": "Anger om leveransen (i dess helhet) är gallringsbar.",
+			"description": "Anger om leveransen (i sin helhet) är gallringsbar.",
 			"type": "string",
-			"enum": ["Yes", "No"]
+			"enum": ["", "Yes", "No"]
 		},
 		"sekretess": {
 			"description": "Anger om leveransen innehåller information som kan omfattas av sekretess eller GDPR.",
 			"type": "string",
-			"enum": ["Secrecy", "GDPR"]
+			"enum": ["", "Secrecy", "GDPR"]
+		},
+		"diarium_kod": {
+			"description": "Kod i diariesystem för det diarium som leveransen avser.",
+			"type": "string"
+		},
+		"diarium_namn": {
+			"description": "Namn i diariesystem på det diarium som leveransen avser.",
+			"type": "string"
 		}
-		
-		
 	},
 	"required": [
 		"leveransfil",
@@ -133,6 +147,8 @@
 		"slutdatum",
 		"arkivbildare",
 		"arkivbildare_id",
+		"arkivbildare_system",
+		"arkivbildare_system_version",
 		"nivå",
 		"ansvarig_enhet",
 		"ansvarig_enhet_id",
@@ -141,8 +157,6 @@
 		"bevarande_enhet",
 		"bevarandesystem",
 		"bevarandesystem_version",
-		"levererande_system",
-		"levererande_system_version",
 		"leveransöverenskommelse",
 		"leveransöverenskommelse_essarch",
 		"arkiv",
