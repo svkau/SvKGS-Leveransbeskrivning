@@ -1,17 +1,24 @@
 # SvKGS-Leveransbeskrivning
 
-***Version 0.1***
+***Version 1.0***
 
 # Innehåll
 
-- 1 [Inledning](#1-inledning)
-  - 1.1 [Arkivpaket](#11-arkivpaket)
-- 3 [Dataelement med exempel](#3-dataelement-med-exempel)
-  - 3.1 [Övergripande information om XML-dokumentet](#31-övergripande-information-om-xml-dokumentet)
+**1** [Inledning](#1-inledning)
+
+**2** [Leveranspaket](#2-leveranspaket)
+
+  **2.1** [Utformning av leveranspaket](#21-utformning-av-leveranspaket)
+  
+**3** [Leveransbeskrivning](#3-leveransbeskrivning)
+
+  **3.1** [Uppgifter i leveransbeskrivningen](#31-uppgifter-i-leveransbeskrivningen)
+  
+  **3.2** [Exempel på leveransbeskrivning](#32-exempel-på-leveransbeskrivning)
 
 # 1. Inledning
 
-*Svenska kyrkans gemensamma specifikationer för elektronisk arkivering* beskriver vilken information som ska
+*Svenska kyrkans gemensamma specifikationer för elektronisk arkivering* (SvKGS) beskriver vilken information som ska
 ingå vid leverans till Svenska kyrkans gemensamma e-arkiv och hur denna information ska struktureras.
 
 Leveranser till e-arkivet delas in i informationstyper. Exempel på sådana kan vara ärendeakter med handlingar,
@@ -46,17 +53,19 @@ Det finns en plan att övergå till version 2.0 av Riksarkivets FGS så snart de
 Specifikationerna i det här dokumentet beskriver enbart hur ett leveranspaket i sin helhet ska utformas och vilken metadata som ska ingå.
 Hur den information som ska arkiveras ska struktureras, och vilket format den ska ha framgår av andra specifikationer, så som t.ex. [SvKGS Ärendehandlingar](https://github.com/svkau/SvKGS-Arendehandlingar)
 
-# 2.1. Utformning av leveranspaket
+## 2.1. Utformning av leveranspaket
 Ett leveranspaket ska bestå av en okrypterad ZIP-fil med filändelsen .zip. I ZIP-filen ska det finnas två mappar benämnda ***content*** och ***metadata***.
 I mappen ***content*** samlas den information som ska arkiveras. I mappen ***metadata*** samlas alla XML-scheman och andra scheman som behövs för att validera information i mappen ***content***. Hur informationen som ska arkiveras ska struktureras, och vilka scheman som behöver bifogas måste följa specifikationer som har upprättats av Svenska kyrkans arkiv i Uppsala.
 
-ZIP-filens namn ska bestå av ett prefix som identifierar det levererande systemet eller den informationstyp som leveransen avser. Till prefixet ska ett UUID kopplas för att säkerställa filnamnets unicitet. Filen ska slutligen ha filändelsen .zip. Exempel: P360_5c3ccbc2-d929-4b4d-be31-d642cabb595d.zip
+ZIP-filens namn ska bestå av ett prefix som identifierar det levererande systemet eller den informationstyp som leveransen avser. Till prefixet ska ett UUID kopplas för att säkerställa filnamnets unicitet. Filen ska slutligen ha filändelsen .zip. **Exempel:** P360_5c3ccbc2-d929-4b4d-be31-d642cabb595d.zip
 
 # 3. Leveransbeskrivning
 Tillsammans med leveranspaketet, men som en separat fil som inte ingår i ZIP-filen, ska vid leveransen bifogas en ***leveransbeskrivning***.
-Beskrivningen ska vara en JSON-fil med samma namn som ZIP-filen (men med filändelsen .json). JSON-filen ska ha den utformning som specificeras nedan, och ska kunna valideras med schemat leveransbeskrivning_schema_1_0.json.
+Beskrivningen ska vara en JSON-fil med samma namn som ZIP-filen (men med filändelsen .json). JSON-filen ska ha den utformning som specificeras nedan, och ska kunna valideras med schemat leveransbeskrivning_schema_1_0.json. **Exempel:**  P360_5c3ccbc2-d929-4b4d-be31-d642cabb595d.json
 
-## 3.1. Specifikation för*leveransfil*
+## 3.1 Uppgifter i leveransbeskrivningen
+
+### *Leveransfil*
 
 > Obligatoriskt.
 
@@ -70,18 +79,18 @@ Beskrivningen ska vara en JSON-fil med samma namn som ZIP-filen (men med filänd
 
 ---
 
-## *Kontrollsumma*
+### *Kontrollsumma*
 
 > Obligatoriskt.
 
-> Beräknad kontrollsumma för aktuell **Leveransfil** (ZIP-fil). 
+> Beräknad kontrollsumma för aktuell **Leveransfil** (ZIP-filen). 
 
 > **Nyckel:**	`kontrollsumma`<br/>
 > **Datatyp:**	sträng
 
 ---
 
-## *Algoritm*
+### *Algoritm*
 
 > Obligatoriskt.
 
@@ -94,7 +103,7 @@ Beskrivningen ska vara en JSON-fil med samma namn som ZIP-filen (men med filänd
 
 ---
 
-## *Startdatum*
+### *Startdatum*
 
 > Obligatoriskt.
 
@@ -108,7 +117,7 @@ Beskrivningen ska vara en JSON-fil med samma namn som ZIP-filen (men med filänd
 
 ---
 
-## *Slutdatum*
+### *Slutdatum*
 
 > Obligatoriskt.
 
@@ -122,7 +131,7 @@ Beskrivningen ska vara en JSON-fil med samma namn som ZIP-filen (men med filänd
 
 ---
 
-## *Arkivbildare*
+### *Arkivbildare*
 
 > Obligatoriskt.
 
@@ -136,7 +145,7 @@ Beskrivningen ska vara en JSON-fil med samma namn som ZIP-filen (men med filänd
 
 ---
 
-## *Arkivbildarens ID*
+### *Arkivbildarens ID*
 
 > Obligatoriskt.
 
@@ -149,24 +158,24 @@ Beskrivningen ska vara en JSON-fil med samma namn som ZIP-filen (men med filänd
 
 ---
 
-## *Nivå*
+### *Nivå*
 
 > Obligatoriskt.
 
-> Den kyrkoorganisatoriska nivå som arkivbildaren tillhör. Värdet kan vara antingen "lokal", "regional" eller "nationell".
+> Den kyrkoorganisatoriska nivå som arkivbildaren tillhör. Värdet kan vara antingen "Församling/pastorat", "Stift" eller "Nationell nivå".
  
-> **Exempel:** lokal
+> **Exempel:** Stift
 
 > **Nyckel:**	`nivå`<br/>
 > **Datatyp:**	sträng
 
 ---
 
-## *Ansvarig enhet*
+### *Ansvarig enhet*
 
 > Obligatoriskt.
 
-> Namnet på den kyrkliga enhet eller organsiation som ansvarar för leveransen.
+> Namnet på den kyrkliga enhet eller organsiation som ansvarar för leveransen. Namnet måste finnas i Svenska kyrkans gemensamma arkivredovisning.
  
 > **Exempel:** Sunne pastorat
 
@@ -175,11 +184,11 @@ Beskrivningen ska vara en JSON-fil med samma namn som ZIP-filen (men med filänd
 
 ---
 
-## *Ansvarig enhets ID*
+### *Ansvarig enhets ID*
 
 > Obligatoriskt.
 
-> En identifikator för den kyrkliga enhet eller organisation som ansvarar för leveransen, i regel organisationsnummer (utan bindestreck).
+> En identifikator för den kyrkliga enhet eller organisation som ansvarar för leveransen, i regel enhetsid i Svenska kyrkans indelningssystem.
  
 > **Exempel:** 2520037173
 
@@ -188,7 +197,7 @@ Beskrivningen ska vara en JSON-fil med samma namn som ZIP-filen (men med filänd
 
 ---
 
-## *Bidragande organisation*
+### *Bidragande organisation*
 
 > Inte obligatoriskt.
 
@@ -201,7 +210,7 @@ Beskrivningen ska vara en JSON-fil med samma namn som ZIP-filen (men med filänd
 
 ---
 
-## *Informationsägare*
+### *Informationsägare*
 
 > Obligatoriskt.
 
@@ -214,7 +223,7 @@ Beskrivningen ska vara en JSON-fil med samma namn som ZIP-filen (men med filänd
 
 ---
 
-## *Informationsägares ID*
+### *Informationsägares ID*
 
 > Obligatoriskt.
 
@@ -227,7 +236,7 @@ Beskrivningen ska vara en JSON-fil med samma namn som ZIP-filen (men med filänd
 
 ---
 
-## *Bevarande enhet*
+### *Bevarande enhet*
 
 > Obligatoriskt.
 
@@ -240,59 +249,33 @@ Beskrivningen ska vara en JSON-fil med samma namn som ZIP-filen (men med filänd
 
 ---
 
-## *Bevarandesystem*
+### *Bevarandesystem*
 
 > Obligatoriskt.
 
 > Namn på IT-system eller teknisk plattform som används för att ta emot och bevara aktuell leverans.
  
-> **Exempel:** ESSArch
+> **Exempel:** ES Solutions, ESSArch
 
 > **Nyckel:**	`bevarandesystem`<br/>
 > **Datatyp:**	sträng
 
 ---
 
-## *Version av bevarandesystemet*
+### *Version av bevarandesystemet*
 
 > Obligatoriskt.
 
 > Bevarandesystemets versionsnummer.
  
-> **Exempel:** 2.0
+> **Exempel:** 3.2.4
 
 > **Nyckel:**	`bevarandesystem_version`<br/>
 > **Datatyp:**	sträng
 
 ---
 
-## *Levererande system*
-
-> Obligatoriskt.
-
-> Namn på det IT-system som den levererade informationen har hämtats från, källsystemet.
- 
-> **Exempel:** Public 360
-
-> **Nyckel:**	`levererande_system`<br/>
-> **Datatyp:**	sträng
-
----
-
-## *Versions av det levererande systemet*
-
-> Obligatoriskt.
-
-> Levererande systems versionsnummer.
- 
-> **Exempel:** 2.0
-
-> **Nyckel:**	`levererande_system_version`<br/>
-> **Datatyp:**	sträng
-
----
-
-## *Leveransöverenskommelse*
+### *Leveransöverenskommelse*
 
 > Obligatoriskt.
 
@@ -305,20 +288,20 @@ Beskrivningen ska vara en JSON-fil med samma namn som ZIP-filen (men med filänd
 
 ---
 
-## *Teknisk leveransöverenskommelse*
+### *Teknisk leveransöverenskommelse*
 
 > Obligatoriskt.
 
 > Hänvisning till leveransöverenskommelse som har specificerats i Svenska kyrkans gemensamma e-arkiv. Värdet måste vara namnet på en i ESSArch befintlig leveransöverenskommelse.
  
-> **Exempel:** ERMS_VIPS
+> **Exempel:** LÖK P360
 
 > **Nyckel:**	`leveransöverenskommelse_essarch`<br/>
 > **Datatyp:**	sträng
 
 ---
 
-## *Arkiv*
+### *Arkiv*
 
 > Obligatoriskt.
 
@@ -331,37 +314,39 @@ Beskrivningen ska vara en JSON-fil med samma namn som ZIP-filen (men med filänd
 
 ---
 
-## *Beståndskod*
+### *Beståndskod*
 
 > Obligatoriskt.
 
 > Arkivets referenskod eller annat ID. Beståndskoden måste finnas i Svenska kyrkans gemensamma arkivredovisning.
  
-> **Exempel:** SE/SVK/0976/0003
+> **Exempel:** SE/SVK/116840/001
 
 > **Nyckel:**	`beståndskod`<br/>
 > **Datatyp:**	sträng
 
 ---
 
-## *Klassificeringsstruktur*
+### *Klassificeringsstruktur*
 
 > Obligatoriskt.
 
 > Namn och version på den klassificeringsstruktur som är giltig för leveransen. Värdet måste vara en hänvisning till en klassificeringsstruktur som finns i Svenska kyrkans gemensamma arkivredovining.
  
-> **Exempel:** KlassL_0.1_2022
+> **Exempel:** KlaSL2016_1.0
 
 > **Nyckel:**	`klassificeringsstruktur`<br/>
 > **Datatyp:**	sträng
 
 ---
 
-## *Enhet i klassificeringsstruktur*
+### *Enhet i klassificeringsstruktur*
 
-> Obligatoriskt.
+> Obligatoriskt (med vissa undantag).
 
 > Namn på den enhet (process) i klassificeringsstrukturen som gäller för leveransen. Värdet måste vara en hänvisning till en enhet i en klassificeringsstruktur som finns i Svenska kyrkans gemensamma arkivredovining.
+>
+> Om en leverans består av flera ärenden med olika klassificeringar, ska värdet på detta element vara en tom sträng (men elementet får inte utelämnas helt) om klassificeringen framgår av respektive ärende i leveransen.
  
 > **Exempel:** 2.2.1
 
@@ -370,20 +355,20 @@ Beskrivningen ska vara en JSON-fil med samma namn som ZIP-filen (men med filänd
 
 ---
 
-## *Förteckningsplan*
+### *Förteckningsplan*
 
 > Obligatoriskt.
 
 > Namn och version på den förteckningsplan som är giltig för leveransen. Värdet måste vara en hänvisning till en förteckningsplan som finns i Svenska kyrkans gemensamma arkivredovining.
  
-> **Exempel:** Förteckningsplan Lokal nivå 2022
+> **Exempel:** Förteckningsplan för lokal nivå (SvKB 2017:1). Version 1.0
 
 > **Nyckel:**	`förteckningsplan`<br/>
 > **Datatyp:**	sträng
 
 ---
 
-## *Enhet i förteckningsplan*
+### *Enhet i förteckningsplan*
 
 > Obligatoriskt.
 
@@ -396,7 +381,7 @@ Beskrivningen ska vara en JSON-fil med samma namn som ZIP-filen (men med filänd
 
 ---
 
-## *Informationstyp*
+### *Informationstyp*
 
 > Obligatoriskt.
 
@@ -409,26 +394,27 @@ Beskrivningen ska vara en JSON-fil med samma namn som ZIP-filen (men med filänd
 
 ---
 
-## *Anpassad informationstyp*
+### *Anpassad informationstyp*
 
 > Obligatoriskt.
 
 > Anpassad informationstyp för Svenska kyrkan. Detta måste vara en informationstyp som är giltig i Svenska kyrkans gemensamma e-arkiv.
  
-> **Exempel:** SvKGS-Ärendehandlingar
+> **Exempel:** SvKGS-Ärendehandlingar. Version 1.0
 
 > **Nyckel:**	`anpassad_informationstyp`<br/>
 > **Datatyp:**	sträng
 
 ---
 
-## *Gallring*
+### *Gallring*
 
 > Inte obligatoriskt.
 
-> Anger om leveransen (i dess helhet) är gallringsbar. Giltiga värden är "Yes" eller "No".
+> Anger om leveransen (i sin helhet) är gallringsbar. Giltiga värden är "Yes" eller "No".
 >
 > Om detta värde utelämnas i JSON-filen anses det betyda att värdet är "No".  E-arkivet tar i regel inte emot gallringsbar information.
+> Elementet kan också helt utelämnas.
  
 > **Exempel:** No
 
@@ -437,54 +423,82 @@ Beskrivningen ska vara en JSON-fil med samma namn som ZIP-filen (men med filänd
 
 ---
 
-## *Sekretess*
+### *Sekretess*
 
 > Inte obbligatoriskt.
 
 > Anger om leveransen innehåller information som kan omfattas av sekretess eller GDPR. Giltiga värden är "Secrecy" eller "GDPR".
 >
-> Om ingen sekretess eller GDPR föreligger, utelämnas värdet i JSON-filen.
+> Om ingen sekretess eller GDPR föreligger, utelämnas elementet i JSON-filen.
+> Om nyckeln finns i JSON-filen, men värdet är en tom sträng, anses det vara det samma om om elementet hade utelämnats.
  
 > **Exempel:** Secrecy
 
 > **Nyckel:**	`sekretess`<br/>
 > **Datatyp:**	sträng
 
-# Exempel på JSON-fil
+---
+
+### *Diarium: Kod*
+
+> Enbart obbligatoriskt om leveransen avser ärendehandlingar från diariesystem.
+
+> Kod i diariesystem för det diarium som leveransen avser.
+ 
+> **Exempel:** P
+
+> **Nyckel:**	`diarium_kod`<br/>
+> **Datatyp:**	sträng
+
+---
+
+### *Diarium: Namn*
+
+> Enbart obbligatoriskt om leveransen avser ärendehandlingar från diariesystem.
+
+> Namn i diariesystem på det diarium som leveransen avser.
+ 
+> **Exempel:** Sunne pastorat
+
+> **Nyckel:**	`diarium_namn`<br/>
+> **Datatyp:**	sträng
+
+
+## 3.2 Exempel på leveransbeskrivning
+
 ```json
 {
-  "leveransfil": "p360_36c0954c-dcc5-42aa-9e95-a7f199d5bdaf.zip",
-  "startdatum": "2023-01-01T00:00:00",
-  "slutdatum": "2023-12-31T00:00:00",
-  "arkivbildare": "Sunne församling",
-  "arkivbildare_id": "2520020674",
-  "nivå": "lokal",
-  "ansvarig_enhet": "Sunne pastorat",
-  "ansvarig_enhet_id": "2520037173",
-  "bidragande_organisation": "Konsultföretaget AB",
-  "informationsägare": "Sunne pastorat",
-  "informationsägare_id": "2520037173",
-  "bevarande_enhet": "Kyrkostyrelsen, Dokument och Arkiv",
-  "bevarandesystem": "ESSArch",
-  "bevarandesystem_version": "2.0",
-  "levererande_system": "Public 360",
-  "levererande_system_version": "2.0",
-  "leveransöverenskommelse": "KS 2023-4045",
-  "leveransöverenskommelse_essarch": "ERMS_VIPS",
-  "arkiv": " Församlingsarkiv för Sunne församling",
-  "beståndskod": "SE/SVK/0976/0003",
-  "klassificeringsstruktur": " KlassL_0.1_2022",
-  "klassificeringsstruktur_enhet": "2.2.1",
-  "förteckningsplan": "Förteckningsplan Lokal nivå 2022",
-  "förteckningsplan_enhet": "D1b",
-  "informationstyp": "ERMS",
-  "anpassad_informationstyp": "SvKGS-Ärendehandlingar",
-  "gallring": "No",
-  "sekretess": "Secrecy"
+    "leveransfil": "P360_6ece020a-09ad-4880-9f38-9f20eb636e50.zip",
+    "kontrollsumma": "c4684c92131a9a84227d95d7ea32bce8",
+    "algoritm": "md5",
+    "startdatum": "2019-12-13T13:20:58",
+    "slutdatum": "2024-04-18T10:26:57",
+    "arkivbildare": "Sunne församling",
+    "arkivbildare_id": "0123456789",
+    "arkivbildare_system": "Public 360",
+    "arkivbildare_system_version": "5.17",
+    "nivå": "Församling/pastorat",
+    "ansvarig_enhet": "Sunne pastorat",
+    "ansvarig_enhet_id": "20111",
+    "bidragande_organisation": "Tietoevry",
+    "informationsägare": "Sunne pastorat",
+    "informationsägare_id": "1234567890",
+    "bevarande_enhet": "Kyrkostyrelsen, Dokument och Arkiv",
+    "bevarandesystem": "ES Solutions, ESSArch",
+    "bevarandesystem_version": "3.2.4",
+    "leveransöverenskommelse": "KS 2024-0736",
+    "leveransöverenskommelse_essarch": "LÖK P360",
+    "arkiv": "församlingsarkiv för Sunne församling",
+    "beståndskod": "SE/SVK/116840/001",
+    "klassificeringsstruktur": "KlaSL2016_1.0",
+    "klassificeringsstruktur_enhet": "",
+    "förteckningsplan": "Förteckningsplan för lokal nivå (SvKB 2017:1). Version 1.0",
+    "förteckningsplan_enhet": "D1aa",
+    "informationstyp": "ERMS",
+    "anpassad_informationstyp": "SvKGS-Ärendehandlingar. Version 1.0",
+    "gallring": "",
+    "sekretess": "",
+    "diarium_kod": "F",
+    "diarium_namn": "Gärsnäs församling"
 }
 ```
-## Leveranspaket
-
-![leveranspaket](https://github.com/svkau/SvKGS-Leveransbeskrivning/assets/13225565/c5ee3f0b-78dd-4df4-a3d3-080b6b9e222c)
-
-
