@@ -33,23 +33,30 @@ för informationstypen i fråga.
 - [Dilcis Board](https://dilcis.eu)
 - [Riksarkivet FGS](https://riksarkivet.se/fgs-earkiv)
 
-## 1.1. Arkivpaket
+# 2. Leveranspaket
 
-Leverans av information till e-arkivet sker i form av arkivpaket. Ett paket är en mappstruktur med filer.
-Paketet innehåller den levererade informationen, arkivobjektet, men också metadata som beskriver
-informationen och den levererande arkivbildaren.
+Leverans av information till e-arkivet sker i form av leveranspaket. Ett paket är en mappstruktur med filer som samlas i en arkivfil, t.ex. ZIP och TAR.
+Paketet innehåller den levererade informationen, arkivobjektet, men också metadata som beskriver informationen och den levererande arkivbildaren.
 
-Specifikationerna i det här dokumentet beskriver arkivobjektet, det vill säga den information som
-ska arkiveras. Det utgör endast en del av hela arkivpaketet.
+Svenska kyrkans utformning av leveranspaket (SIP) utgår från Riksarkivets specifikation
+[FGS Paketstruktur 1.2](https://riksarkivet.se/Media/pdf-filer/doi-t/FGS_Paketstruktur_RAFGS1V1_2.pdf) men är anpassad efter egna behov.
+Efter mottagande i e-arkivet omformas paketet till ett arkivpaket (AIP) som är helt i enlighet med FGS Paketstruktur 1.2. 
+Det finns en plan att övergå till version 2.0 av Riksarkivets FGS så snart det är möjligt.
 
-Arkivpaketet i sin helhet utformas i enlighet med Riksarkivets specifikation
-[FGS Paketstruktur 1.2](https://riksarkivet.se/Media/pdf-filer/doi-t/FGS_Paketstruktur_RAFGS1V1_2.pdf).
+Specifikationerna i det här dokumentet beskriver enbart hur ett leveranspaket i sin helhet ska utformas och vilken metadata som ska ingå.
+Hur den information som ska arkiveras ska struktureras, och vilket format den ska ha framgår av andra specifikationer, så som t.ex. [SvKGS Ärendehandlingar](https://github.com/svkau/SvKGS-Arendehandlingar)
 
+# 2.1. Utformning av leveranspaket
+Ett leveranspaket ska bestå av en okrypterad ZIP-fil med filändelsen .zip. I ZIP-filen ska det finnas två mappar benämnda ***content*** och ***metadata***.
+I mappen ***content*** samlas den information som ska arkiveras. I mappen ***metadata*** samlas alla XML-scheman och andra scheman som behövs för att validera information i mappen ***content***. Hur informationen som ska arkiveras ska struktureras, och vilka scheman som behöver bifogas måste följa specifikationer som har upprättats av Svenska kyrkans arkiv i Uppsala.
 
+ZIP-filens namn ska bestå av ett prefix som identifierar det levererande systemet eller den informationstyp som leveransen avser. Till prefixet ska ett UUID kopplas för att säkerställa filnamnets unicitet. Filen ska slutligen ha filändelsen .zip. Exempel: P360_5c3ccbc2-d929-4b4d-be31-d642cabb595d.zip
 
 # 3. Leveransbeskrivning
+Tillsammans med leveranspaketet, men som en separat fil som inte ingår i ZIP-filen, ska vid leveransen bifogas en ***leveransbeskrivning***.
+Beskrivningen ska vara en JSON-fil med samma namn som ZIP-filen (men med filändelsen .json). JSON-filen ska ha den utformning som specificeras nedan, och ska kunna valideras med schemat leveransbeskrivning_schema_1_0.json.
 
-## *leveransfil*
+## 3.1. Specifikation för*leveransfil*
 
 > Obligatoriskt.
 
