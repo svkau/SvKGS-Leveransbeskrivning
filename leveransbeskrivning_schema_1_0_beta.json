@@ -46,7 +46,7 @@
 		"nivå": {
 			"description": "Den kyrkoorganisatoriska nivå som arkivbildaren tillhör.",
 			"type": "string",
-			"enum": ["lokal", "regional", "nationell"]
+			"enum": ["Församling/pastorat", "Stift", "Nationell nivå"]
 		},
 		"ansvarig_enhet": {
 			"description": "Namnet på den kyrkliga enhet eller organsiation som ansvarar för leveransen.",
