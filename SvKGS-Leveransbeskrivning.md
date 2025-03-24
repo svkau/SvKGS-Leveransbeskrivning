@@ -59,6 +59,12 @@ I mappen ***content*** samlas den information som ska arkiveras. I mappen ***met
 
 ZIP-filens namn ska bestå av ett prefix som identifierar det levererande systemet eller den informationstyp som leveransen avser. Till prefixet ska ett UUID kopplas för att säkerställa filnamnets unicitet. Filen ska slutligen ha filändelsen .zip. **Exempel:** P360_5c3ccbc2-d929-4b4d-be31-d642cabb595d.zip
 
+- Namn på filer och filkataloger i ett leveraspaket får endast innehålla följande tecken: a..z, A..Z, 0..9, ”-” och ”_”. Några andra tecken får inte användas.
+- Som skiljetecken till filnamnsändelse används ”.”. Några andra tecken får inte användas.
+- Filnamnsändelser ska användas och vara de vedertagna för respektive filformat, exempelvis ”.pdf” för PDF-filer och ”.xml” för XML-filer.
+- Namn på filkataloger ska vara utan ändelse.
+- Dubbla filnamnsändelser ska undvikas.
+
 # 3. Leveransbeskrivning
 Tillsammans med leveranspaketet, men som en separat fil som inte ingår i ZIP-filen, ska vid leveransen bifogas en ***leveransbeskrivning***.
 Beskrivningen ska vara en JSON-fil med samma namn som ZIP-filen (men med filändelsen .json). JSON-filen ska ha den utformning som specificeras nedan, och ska kunna valideras med schemat leveransbeskrivning_schema_1_0.json. **Exempel:**  P360_5c3ccbc2-d929-4b4d-be31-d642cabb595d.json
