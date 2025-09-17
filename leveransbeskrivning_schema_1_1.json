@@ -1,0 +1,191 @@
+{
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"$id": "https://xml.svenskakyrkan.se/leveransbeskrivning/leveransbeskrivning_schema_1_1.json",
+	"title": "Leveransbeskrivning",
+	"description": "Metadata om levererad information från IT-system till Svenska kyrkans gemensamma e-arkiv",
+	"type": "object",
+	"properties": {
+		"leveransfil": {
+			"description": "Namnet på den ZIP-fil som innehåller arkivleveransen.",
+			"type": "string",
+			"minLength": 1
+		},
+		"kontrollsumma": {
+			"description": "Beräknad kontrollsumma för aktuell Leveransfil (ZIP-filen).",
+			"type": "string",
+			"minLength": 1
+		},
+		"algoritm": {
+			"description": "Den algoritm som har använts för att beräkna Kontrollsumma.",
+			"type": "string",
+			"minLength": 1
+		},
+		"startdatum": {
+			"description": "Startdatum för den levererade informationen i leveransfilen.",
+			"type": "string",
+			"minLength": 1,
+			"pattern": "^[0-9]{4}-(((0[13578]|(10|12))-(0[1-9]|[1-2][0-9]|3[0-1]))|(02-(0[1-9]|[1-2][0-9]))|((0[469]|11)-(0[1-9]|[1-2][0-9]|30)))T(2[0-3]|[01][0-9]):?([0-5][0-9]):?([0-5][0-9])"
+		},
+		"slutdatum": {
+			"description": "Slutdatum för den levererade informationen i leveransfilen.",
+			"type": "string",
+			"minLength": 1,
+			"pattern": "^[0-9]{4}-(((0[13578]|(10|12))-(0[1-9]|[1-2][0-9]|3[0-1]))|(02-(0[1-9]|[1-2][0-9]))|((0[469]|11)-(0[1-9]|[1-2][0-9]|30)))T(2[0-3]|[01][0-9]):?([0-5][0-9]):?([0-5][0-9])"
+		},
+		"arkivbildare": {
+			"description": "Namnet på arkivbildaren för den levererade informationen.",
+			"type": "string",
+			"minLength": 1
+		},
+		"arkivbildare_id": {
+			"description": "En identifikator för arkivbildaren.",
+			"type": "string",
+			"minLength": 1
+		},
+		"arkivbildare_system": {
+			"description": "Namn på det IT-system som leveransen kommer ifrån.",
+			"type": "string",
+			"minLength": 1
+		},
+		"arkivbildare_system_version": {
+			"description": "Version för det IT-system som leveransen kommer ifrån..",
+			"type": "string"
+		},
+		"ansvarig_enhet": {
+			"description": "Namnet på den kyrkliga enhet eller organsiation som ansvarar för leveransen.",
+			"type": "string",
+			"minLength": 1
+		},
+		"ansvarig_enhet_id": {
+			"description": "En identifikator för den kyrkliga enhet eller organisation som ansvarar för leveransen.",
+			"type": "string",
+			"minLength": 1
+		},
+		"bidragande_organisation": {
+			"description": "Namn på t.ex. konsultföretag som har hjälpt till att skapa uttag för arkivering.",
+			"type": "string"
+		},
+		"informationsägare": {
+			"description": "Namn på den kyrkliga enhet som har arkivansvar fär den levererade informationen.",
+			"type": "string",
+			"minLength": 1
+		},
+		"informationsägare_id": {
+			"description": "En identifikator för den kyrkliga enhet som har arkivansvar för den levererade informationen.",
+			"type": "string",
+			"minLength": 1
+		},
+		"bevarande_enhet": {
+			"description": "Namn på den enhet eller organisation som tar emot leveransen och ansvarar för bevarandet.",
+			"type": "string",
+			"minLength": 1,
+			"enum": ["Kyrkostyrelsen, Dokument och Arkiv"]
+		},
+		"bevarandesystem": {
+			"description": "Namn på IT-system eller teknisk plattform som används för att ta emot och bevara aktuell leverans.",
+			"type": "string",
+			"enum": ["ES Solutions, ESSArch"]
+		},
+		"bevarandesystem_version": {
+			"description": "Bevarandesystemets versionsnummer.",
+			"type": "string"
+		},
+		"leveransöverenskommelse": {
+			"description": "Hänvisning till leveransöverenskommelse som gäller för aktuell leverans.",
+			"type": "string",
+			"minLength": 1
+		},
+		"leveransöverenskommelse_essarch": {
+			"description": "Hänvisning till leveransöverenskommelse som har specificerats i Svenska kyrkans gemensamma e-arkiv.",
+			"type": "string",
+			"minLength": 1
+		},
+		"arkiv": {
+			"description": "Namn på det arkiv som den levererade informationen tillhör.",
+			"type": "string",
+			"minLength": 1
+		},
+		"beståndskod": {
+			"description": "Arkivets referenskod eller annat ID",
+			"type": "string",
+			"minLength": 1
+		},
+		"klassificeringsstruktur": {
+			"description": "Namn och version på den klassificeringsstruktur som är giltig för leveransen.",
+			"type": "string",
+			"minLength": 1
+		},
+		"klassificeringsstruktur_enhet": {
+			"description": "Namn på den enhet (process) i klassificeringsstrukturen som gäller för leveransen.",
+			"type": "string"
+		},
+		"förteckningsplan": {
+			"description": "Namn och version på den förteckningsplan som är giltig för leveransen.",
+			"type": "string",
+			"minLength": 1
+		},
+		"förteckningsplan_enhet": {
+			"description": "Namn och version på den enhet (förvaringsenhet) i förteckningsplanen som är giltig för leveransen.",
+			"type": "string",
+			"minLength": 1
+		},
+		"informationstyp": {
+			"description": "Övergripande informationstypsspecifikation.",
+			"type": "string",
+			"minLength": 1
+		},
+		"anpassad_informationstyp": {
+			"description": "Anpassad informationstyp för Svenska kyrkan.",
+			"type": "string",
+			"minLength": 1
+		},
+		"gallring": {
+			"description": "Anger om leveransen (i sin helhet) är gallringsbar.",
+			"type": "string",
+			"enum": ["", "Yes", "No"]
+		},
+		"sekretess": {
+			"description": "Anger om leveransen innehåller information som kan omfattas av sekretess eller GDPR.",
+			"type": "string",
+			"enum": ["", "Secrecy", "GDPR"]
+		},
+		"diarium_kod": {
+			"description": "Kod i diariesystem för det diarium som leveransen avser.",
+			"type": "string",
+			"minLength": 1
+		},
+		"diarium_namn": {
+			"description": "Namn i diariesystem på det diarium som leveransen avser.",
+			"type": "string",
+			"minLength": 1
+		}
+	},
+	"required": [
+		"leveransfil",
+		"kontrollsumma",
+		"algoritm",
+		"startdatum",
+		"slutdatum",
+		"arkivbildare",
+		"arkivbildare_id",
+		"arkivbildare_system",
+		"ansvarig_enhet",
+		"ansvarig_enhet_id",
+		"informationsägare",
+		"informationsägare_id",
+		"bevarande_enhet",
+		"leveransöverenskommelse",
+		"leveransöverenskommelse_essarch",
+		"arkiv",
+		"beståndskod",
+		"klassificeringsstruktur",
+		"klassificeringsstruktur_enhet",
+		"förteckningsplan",
+		"förteckningsplan_enhet",
+		"informationstyp",
+		"anpassad_informationstyp",
+		"diarium_kod",
+		"diarium_namn"
+	]
+
+}
