@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"$id": "https://earkiv.svenskakyrkan.se/schemas/json/leveransbeskrivning_schema_1_1.json",
+	"$id": "https://earkiv.svenskakyrkan.se/schemas/json/leveransbeskrivning_diarium_schema_1_1.json",
 	"title": "Leveransbeskrivning",
 	"description": "Metadata om levererad information från IT-system till Svenska kyrkans gemensamma e-arkiv",
 	"type": "object",
@@ -172,3 +172,4 @@
 		"diarium_namn"
 	]
 }
+
