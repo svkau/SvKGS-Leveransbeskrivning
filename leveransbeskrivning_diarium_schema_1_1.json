@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"$id": "https://xml.svenskakyrkan.se/leveransbeskrivning/leveransbeskrivning_schema_1_1.json",
+	"$id": "https://earkiv.svenskakyrkan.se/schemas/json/leveransbeskrivning_schema_1_1.json",
 	"title": "Leveransbeskrivning",
 	"description": "Metadata om levererad information från IT-system till Svenska kyrkans gemensamma e-arkiv",
 	"type": "object",
@@ -74,21 +74,6 @@
 			"description": "En identifikator för den kyrkliga enhet som har arkivansvar för den levererade informationen.",
 			"type": "string",
 			"minLength": 1
-		},
-		"bevarande_enhet": {
-			"description": "Namn på den enhet eller organisation som tar emot leveransen och ansvarar för bevarandet.",
-			"type": "string",
-			"minLength": 1,
-			"enum": ["Kyrkostyrelsen, Dokument och Arkiv"]
-		},
-		"bevarandesystem": {
-			"description": "Namn på IT-system eller teknisk plattform som används för att ta emot och bevara aktuell leverans.",
-			"type": "string",
-			"enum": ["ES Solutions, ESSArch"]
-		},
-		"bevarandesystem_version": {
-			"description": "Bevarandesystemets versionsnummer.",
-			"type": "string"
 		},
 		"leveransöverenskommelse": {
 			"description": "Hänvisning till leveransöverenskommelse som gäller för aktuell leverans.",
@@ -173,7 +158,6 @@
 		"ansvarig_enhet_id",
 		"informationsägare",
 		"informationsägare_id",
-		"bevarande_enhet",
 		"leveransöverenskommelse",
 		"leveransöverenskommelse_essarch",
 		"arkiv",
@@ -187,5 +171,4 @@
 		"diarium_kod",
 		"diarium_namn"
 	]
-
 }
