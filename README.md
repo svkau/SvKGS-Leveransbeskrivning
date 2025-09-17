@@ -1,4 +1,4 @@
-# SvKGS-Leveransbeskrivning. Version 1.0
+# SvKGS-Leveransbeskrivning. Version 1.1
 
 ## Ändringar i denna version
 
