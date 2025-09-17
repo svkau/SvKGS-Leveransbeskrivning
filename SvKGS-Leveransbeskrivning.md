@@ -1,6 +1,6 @@
 # SvKGS-Leveransbeskrivning
 
-***Version 1.0***
+***Version 1.1***
 
 # Innehåll
 
@@ -190,19 +190,6 @@ Beskrivningen ska vara en JSON-fil med samma namn som ZIP-filen (men med filänd
 
 ---
 
-### *Nivå*
-
-> Obligatoriskt.
-
-> Den kyrkoorganisatoriska nivå som arkivbildaren tillhör. Värdet kan vara antingen "Församling/pastorat", "Stift" eller "Nationell nivå".
- 
-> **Exempel:** Stift
-
-> **Nyckel:**	`nivå`<br/>
-> **Datatyp:**	sträng
-
----
-
 ### *Ansvarig enhet*
 
 > Obligatoriskt.
@@ -264,45 +251,6 @@ Beskrivningen ska vara en JSON-fil med samma namn som ZIP-filen (men med filänd
 > **Exempel:** 2520037173
 
 > **Nyckel:**	`informationsägare_id`<br/>
-> **Datatyp:**	sträng
-
----
-
-### *Bevarande enhet*
-
-> Obligatoriskt.
-
-> Namn på den enhet eller organisation som tar emot leveransen och ansvarar för bevarandet. I regel är detta alltid "Kyrkostyrelsen, Dokument och Arkiv".
- 
-> **Exempel:** Kyrkostyrelsen, Dokument och Arkiv
-
-> **Nyckel:**	`bevarande_enhet`<br/>
-> **Datatyp:**	sträng
-
----
-
-### *Bevarandesystem*
-
-> Obligatoriskt.
-
-> Namn på IT-system eller teknisk plattform som används för att ta emot och bevara aktuell leverans.
- 
-> **Exempel:** ES Solutions, ESSArch
-
-> **Nyckel:**	`bevarandesystem`<br/>
-> **Datatyp:**	sträng
-
----
-
-### *Version av bevarandesystemet*
-
-> Obligatoriskt.
-
-> Bevarandesystemets versionsnummer.
- 
-> **Exempel:** 3.2.4
-
-> **Nyckel:**	`bevarandesystem_version`<br/>
 > **Datatyp:**	sträng
 
 ---
@@ -509,15 +457,11 @@ Beskrivningen ska vara en JSON-fil med samma namn som ZIP-filen (men med filänd
     "arkivbildare_id": "0123456789",
     "arkivbildare_system": "Public 360",
     "arkivbildare_system_version": "5.17",
-    "nivå": "Församling/pastorat",
     "ansvarig_enhet": "Sunne pastorat",
     "ansvarig_enhet_id": "20111",
     "bidragande_organisation": "Tietoevry",
     "informationsägare": "Sunne pastorat",
     "informationsägare_id": "1234567890",
-    "bevarande_enhet": "Kyrkostyrelsen, Dokument och Arkiv",
-    "bevarandesystem": "ES Solutions, ESSArch",
-    "bevarandesystem_version": "3.2.4",
     "leveransöverenskommelse": "KS 2024-0736",
     "leveransöverenskommelse_essarch": "LÖK P360",
     "arkiv": "församlingsarkiv för Sunne församling",
