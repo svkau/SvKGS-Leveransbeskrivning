@@ -73,375 +73,375 @@ Beskrivningen ska vara en JSON-fil med samma namn som ZIP-filen (men med filänd
 
 ### *Leveransfil*
 
-> Obligatoriskt.
+Obligatoriskt.
 
-> Namnet på den ZIP-fil som innehåller arkivleveransen. Hur namnet ska utformas bestäms i leveransöverenskommelsen.
-> Namnet behöver vara unikt och det måste finnas en komponent som identifierar det levererande IT-systemet.
+Namnet på den ZIP-fil som innehåller arkivleveransen. Hur namnet ska utformas bestäms i leveransöverenskommelsen.
+Namnet behöver vara unikt och det måste finnas en komponent som identifierar det levererande IT-systemet.
  
-> **Exempel:** p360_36c0954c-dcc5-42aa-9e95-a7f199d5bdaf.zip
+**Exempel:** p360_36c0954c-dcc5-42aa-9e95-a7f199d5bdaf.zip
 
-> **Nyckel:**	`leveransfil`<br/>
-> **Datatyp:**	sträng
+**Nyckel:**	`leveransfil`<br/>
+**Datatyp:**	sträng
 
 ---
 
 ### *Kontrollsumma*
 
-> Obligatoriskt.
+Obligatoriskt.
 
-> Beräknad kontrollsumma för aktuell **Leveransfil** (ZIP-filen). 
+Beräknad kontrollsumma för aktuell **Leveransfil** (ZIP-filen). 
 
-> **Nyckel:**	`kontrollsumma`<br/>
-> **Datatyp:**	sträng
+**Nyckel:**	`kontrollsumma`<br/>
+**Datatyp:**	sträng
 
 ---
 
 ### *Algoritm*
 
-> Obligatoriskt.
+Obligatoriskt.
 
-> Den algoritm som har använts för att beräkna **Kontrollsumma**.
+Den algoritm som har använts för att beräkna **Kontrollsumma**.
 
-> **Exempel:** SHA256
+**Exempel:** SHA256
 
-> **Nyckel:**	`algoritm`<br/>
-> **Datatyp:**	sträng
+**Nyckel:**	`algoritm`<br/>
+**Datatyp:**	sträng
 
 ---
 
 ### *Startdatum*
 
-> Obligatoriskt.
+Obligatoriskt.
 
-> Startdatum för den levererade informationen i leveransfilen. Datumet anges i formatet xs:dateTime (enligt [W3C XML Schema Definition Language](https://www.w3.org/TR/xmlschema11-2/)).
+Startdatum för den levererade informationen i leveransfilen. Datumet anges i formatet xs:dateTime (enligt [W3C XML Schema Definition Language](https://www.w3.org/TR/xmlschema11-2/)).
 
  
-> **Exempel:** 2023-01-01T00:00:00
+**Exempel:** 2023-01-01T00:00:00
 
-> **Nyckel:**	`startdatum`<br/>
-> **Datatyp:**	sträng
+**Nyckel:**	`startdatum`<br/>
+**Datatyp:**	sträng
 
 ---
 
 ### *Slutdatum*
 
-> Obligatoriskt.
+Obligatoriskt.
 
-> Slutdatum för den levererade informationen i leveransfilen. Datumet anges i formatet xs:dateTime (enligt [W3C XML Schema Definition Language](https://www.w3.org/TR/xmlschema11-2/)).
+Slutdatum för den levererade informationen i leveransfilen. Datumet anges i formatet xs:dateTime (enligt [W3C XML Schema Definition Language](https://www.w3.org/TR/xmlschema11-2/)).
 
  
-> **Exempel:** 2023-12-31T00:00:00
+**Exempel:** 2023-12-31T00:00:00
 
-> **Nyckel:**	`slutdatum`<br/>
-> **Datatyp:**	sträng
+**Nyckel:**	`slutdatum`<br/>
+**Datatyp:**	sträng
 
 ---
 
 ### *Arkivbildare*
 
-> Obligatoriskt.
+Obligatoriskt.
 
-> Namnet på arkivbildaren för den levererade informationen. Namnet måste finnas i Svenska kyrkans gemensamma arkivredovisning.
+Namnet på arkivbildaren för den levererade informationen. Namnet måste finnas i Svenska kyrkans gemensamma arkivredovisning.
 
  
-> **Exempel:** Sunne församling
+**Exempel:** Sunne församling
 
-> **Nyckel:**	`arkivbildare`<br/>
-> **Datatyp:**	sträng
+**Nyckel:**	`arkivbildare`<br/>
+**Datatyp:**	sträng
 
 ---
 
 ### *Arkivbildarens ID*
 
-> Obligatoriskt.
+Obligatoriskt.
 
-> En identifikator för arkivbildaren, i regel organisationsnummer (utan bindestreck). Identifikatorn måste finnas i Svenska kyrkans gemensamma arkivredovisning.
+En identifikator för arkivbildaren, i regel organisationsnummer (utan bindestreck). Identifikatorn måste finnas i Svenska kyrkans gemensamma arkivredovisning.
  
-> **Exempel:** 2520020674
+**Exempel:** 2520020674
 
-> **Nyckel:**	`arkivbildare_id`<br/>
-> **Datatyp:**	sträng
+**Nyckel:**	`arkivbildare_id`<br/>
+**Datatyp:**	sträng
 
 ---
 
 ### *Arkivbildarens IT-system: Namn*
 
-> Obligatoriskt.
+Obligatoriskt.
 
-> Namn på det IT-system som leveransen kommer ifrån ("källsystemet").
+Namn på det IT-system som leveransen kommer ifrån ("källsystemet").
  
-> **Exempel:** Public 360
+**Exempel:** Public 360
 
-> **Nyckel:**	`arkivbildare_system`<br/>
-> **Datatyp:**	sträng
+**Nyckel:**	`arkivbildare_system`<br/>
+**Datatyp:**	sträng
 
 ---
 
 ### *Arkivbildarens IT-system: Version*
 
-> Obligatoriskt.
+Obligatoriskt.
 
-> Version för det IT-system som leveransen kommer ifrån ("källsystemet").
+Version för det IT-system som leveransen kommer ifrån ("källsystemet").
  
-> **Exempel:** 5.17
+**Exempel:** 5.17
 
-> **Nyckel:**	`arkivbildare_system_version`<br/>
-> **Datatyp:**	sträng
+**Nyckel:**	`arkivbildare_system_version`<br/>
+**Datatyp:**	sträng
 
 ---
 
 ### *Ansvarig enhet*
 
-> Obligatoriskt.
+Obligatoriskt.
 
-> Namnet på den kyrkliga enhet eller organsiation som ansvarar för leveransen. Namnet måste finnas i Svenska kyrkans gemensamma arkivredovisning.
+Namnet på den kyrkliga enhet eller organsiation som ansvarar för leveransen. Namnet måste finnas i Svenska kyrkans gemensamma arkivredovisning.
  
-> **Exempel:** Sunne pastorat
+**Exempel:** Sunne pastorat
 
-> **Nyckel:**	`ansvarig_enhet`<br/>
-> **Datatyp:**	sträng
+**Nyckel:**	`ansvarig_enhet`<br/>
+**Datatyp:**	sträng
 
 ---
 
 ### *Ansvarig enhets ID*
 
-> Obligatoriskt.
+Obligatoriskt.
 
-> En identifikator för den kyrkliga enhet eller organisation som ansvarar för leveransen, i regel enhetsid i Svenska kyrkans indelningssystem.
+En identifikator för den kyrkliga enhet eller organisation som ansvarar för leveransen, i regel enhetsid i Svenska kyrkans indelningssystem.
  
-> **Exempel:** 2520037173
+**Exempel:** 2520037173
 
-> **Nyckel:**	`ansvarig_enhet_id`<br/>
-> **Datatyp:**	sträng
+**Nyckel:**	`ansvarig_enhet_id`<br/>
+**Datatyp:**	sträng
 
 ---
 
 ### *Bidragande organisation*
 
-> Inte obligatoriskt.
+Inte obligatoriskt.
 
-> Namn på t.ex. konsultföretag som har hjälpt till att skapa uttag för arkivering.
+Namn på t.ex. konsultföretag som har hjälpt till att skapa uttag för arkivering.
  
-> **Exempel:** Konsultföretaget AB
+**Exempel:** Konsultföretaget AB
 
-> **Nyckel:**	`bidragande_organisation`<br/>
-> **Datatyp:**	sträng
+**Nyckel:**	`bidragande_organisation`<br/>
+**Datatyp:**	sträng
 
 ---
 
 ### *Informationsägare*
 
-> Obligatoriskt.
+Obligatoriskt.
 
-> Namn på den kyrkliga enhet som har arkivansvar fär den levererade informationen. Namnet måste finnas i Svenska kyrkans gemensamma arkivredovisning.
+Namn på den kyrkliga enhet som har arkivansvar fär den levererade informationen. Namnet måste finnas i Svenska kyrkans gemensamma arkivredovisning.
  
-> **Exempel:** Sunne pastorat
+**Exempel:** Sunne pastorat
 
-> **Nyckel:**	`informationsägare`<br/>
-> **Datatyp:**	sträng
+**Nyckel:**	`informationsägare`<br/>
+**Datatyp:**	sträng
 
 ---
 
 ### *Informationsägares ID*
 
-> Obligatoriskt.
+Obligatoriskt.
 
-> En identifikator för den kyrkliga enhet som har arkivansvar för den levererade informationen, i regel organisationsnummer (utan bindestreck).
+En identifikator för den kyrkliga enhet som har arkivansvar för den levererade informationen, i regel organisationsnummer (utan bindestreck).
  
-> **Exempel:** 2520037173
+**Exempel:** 2520037173
 
-> **Nyckel:**	`informationsägare_id`<br/>
-> **Datatyp:**	sträng
+**Nyckel:**	`informationsägare_id`<br/>
+**Datatyp:**	sträng
 
 ---
 
 ### *Leveransöverenskommelse*
 
-> Obligatoriskt.
+Obligatoriskt.
 
-> Hänvisning till leveransöverenskommelse som gäller för aktuell leverans. I regel anges här ett ärendenummer i kyrkostyrelsens diarium.
+Hänvisning till leveransöverenskommelse som gäller för aktuell leverans. I regel anges här ett ärendenummer i kyrkostyrelsens diarium.
  
-> **Exempel:** KS 2023-0045
+**Exempel:** KS 2023-0045
 
-> **Nyckel:**	`leveransöverenskommelse`<br/>
-> **Datatyp:**	sträng
+**Nyckel:**	`leveransöverenskommelse`<br/>
+**Datatyp:**	sträng
 
 ---
 
 ### *Teknisk leveransöverenskommelse*
 
-> Obligatoriskt.
+Obligatoriskt.
 
-> Hänvisning till leveransöverenskommelse som har specificerats i Svenska kyrkans gemensamma e-arkiv. Värdet måste vara namnet på en i ESSArch befintlig leveransöverenskommelse.
+Hänvisning till leveransöverenskommelse som har specificerats i Svenska kyrkans gemensamma e-arkiv. Värdet måste vara namnet på en i ESSArch befintlig leveransöverenskommelse.
  
-> **Exempel:** LÖK P360
+**Exempel:** LÖK P360
 
-> **Nyckel:**	`leveransöverenskommelse_essarch`<br/>
-> **Datatyp:**	sträng
+**Nyckel:**	`leveransöverenskommelse_essarch`<br/>
+**Datatyp:**	sträng
 
 ---
 
 ### *Arkiv*
 
-> Obligatoriskt.
+Obligatoriskt.
 
-> Namn på det arkiv som den levererade informationen tillhör. Namnet måste finnas i Svenska kyrkans gemensamma arkivredovisning.
+Namn på det arkiv som den levererade informationen tillhör. Namnet måste finnas i Svenska kyrkans gemensamma arkivredovisning.
  
-> **Exempel:** Församlingsarkiv för Sunne församling
+**Exempel:** Församlingsarkiv för Sunne församling
 
-> **Nyckel:**	`arkiv`<br/>
-> **Datatyp:**	sträng
+**Nyckel:**	`arkiv`<br/>
+**Datatyp:**	sträng
 
 ---
 
 ### *Beståndskod*
 
-> Obligatoriskt.
+Obligatoriskt.
 
-> Arkivets referenskod eller annat ID. Beståndskoden måste finnas i Svenska kyrkans gemensamma arkivredovisning.
+Arkivets referenskod eller annat ID. Beståndskoden måste finnas i Svenska kyrkans gemensamma arkivredovisning.
  
-> **Exempel:** SE/SVK/116840/001
+**Exempel:** SE/SVK/116840/001
 
-> **Nyckel:**	`beståndskod`<br/>
-> **Datatyp:**	sträng
+**Nyckel:**	`beståndskod`<br/>
+**Datatyp:**	sträng
 
 ---
 
 ### *Klassificeringsstruktur*
 
-> Obligatoriskt.
+Obligatoriskt.
 
-> Namn och version på den klassificeringsstruktur som är giltig för leveransen. Värdet måste vara en hänvisning till en klassificeringsstruktur som finns i Svenska kyrkans gemensamma arkivredovining.
+Namn och version på den klassificeringsstruktur som är giltig för leveransen. Värdet måste vara en hänvisning till en klassificeringsstruktur som finns i Svenska kyrkans gemensamma arkivredovining.
  
-> **Exempel:** KlaSL2016_1.0
+**Exempel:** KlaSL2016_1.0
 
-> **Nyckel:**	`klassificeringsstruktur`<br/>
-> **Datatyp:**	sträng
+**Nyckel:**	`klassificeringsstruktur`<br/>
+**Datatyp:**	sträng
 
 ---
 
 ### *Enhet i klassificeringsstruktur*
 
-> Obligatoriskt (med vissa undantag).
+Obligatoriskt (med vissa undantag).
 
-> Namn på den enhet (process) i klassificeringsstrukturen som gäller för leveransen. Värdet måste vara en hänvisning till en enhet i en klassificeringsstruktur som finns i Svenska kyrkans gemensamma arkivredovining.
->
-> Om en leverans består av flera ärenden med olika klassificeringar, ska värdet på detta element vara en tom sträng (men elementet får inte utelämnas helt) om klassificeringen framgår av respektive ärende i leveransen.
+Namn på den enhet (process) i klassificeringsstrukturen som gäller för leveransen. Värdet måste vara en hänvisning till en enhet i en klassificeringsstruktur som finns i Svenska kyrkans gemensamma arkivredovining.
+
+Om en leverans består av flera ärenden med olika klassificeringar, ska värdet på detta element vara en tom sträng (men elementet får inte utelämnas helt) om klassificeringen framgår av respektive ärende i leveransen.
  
-> **Exempel:** 2.2.1
+**Exempel:** 2.2.1
 
-> **Nyckel:**	`klassificeringsstruktur_enhet`<br/>
-> **Datatyp:**	sträng
+**Nyckel:**	`klassificeringsstruktur_enhet`<br/>
+**Datatyp:**	sträng
 
 ---
 
 ### *Förteckningsplan*
 
-> Obligatoriskt.
+Obligatoriskt.
 
-> Namn och version på den förteckningsplan som är giltig för leveransen. Värdet måste vara en hänvisning till en förteckningsplan som finns i Svenska kyrkans gemensamma arkivredovining.
+Namn och version på den förteckningsplan som är giltig för leveransen. Värdet måste vara en hänvisning till en förteckningsplan som finns i Svenska kyrkans gemensamma arkivredovining.
  
-> **Exempel:** Förteckningsplan för lokal nivå (SvKB 2017:1). Version 1.0
+**Exempel:** Förteckningsplan för lokal nivå (SvKB 2017:1). Version 1.0
 
-> **Nyckel:**	`förteckningsplan`<br/>
-> **Datatyp:**	sträng
+**Nyckel:**	`förteckningsplan`<br/>
+**Datatyp:**	sträng
 
 ---
 
 ### *Enhet i förteckningsplan*
 
-> Obligatoriskt.
+Obligatoriskt.
 
-> Namn på den enhet (förvaringsenhet) i förteckningsplanen som är giltig för leveransen. Värdet måste vara en hänvisning till en enhet i en förteckningsplan som finns i Svenska kyrkans gemensamma arkivredovining.
+Namn på den enhet (förvaringsenhet) i förteckningsplanen som är giltig för leveransen. Värdet måste vara en hänvisning till en enhet i en förteckningsplan som finns i Svenska kyrkans gemensamma arkivredovining.
  
-> **Exempel:** D1b
+**Exempel:** D1b
 
-> **Nyckel:**	`förteckningsplan_enhet`<br/>
-> **Datatyp:**	sträng
+**Nyckel:**	`förteckningsplan_enhet`<br/>
+**Datatyp:**	sträng
 
 ---
 
 ### *Informationstyp*
 
-> Obligatoriskt.
+Obligatoriskt.
 
-> Övergripande informationstypsspecifikation. Detta måste vara en specifikation som är giltig i Svenska kyrkans gemensamma e-arkiv.
+Övergripande informationstypsspecifikation. Detta måste vara en specifikation som är giltig i Svenska kyrkans gemensamma e-arkiv.
  
-> **Exempel:** ERMS
+**Exempel:** ERMS
 
-> **Nyckel:**	`informationstyp`<br/>
-> **Datatyp:**	sträng
+**Nyckel:**	`informationstyp`<br/>
+**Datatyp:**	sträng
 
 ---
 
 ### *Anpassad informationstyp*
 
-> Obligatoriskt.
+Obligatoriskt.
 
-> Anpassad informationstyp för Svenska kyrkan. Detta måste vara en informationstyp som är giltig i Svenska kyrkans gemensamma e-arkiv.
+Anpassad informationstyp för Svenska kyrkan. Detta måste vara en informationstyp som är giltig i Svenska kyrkans gemensamma e-arkiv.
  
-> **Exempel:** SvKGS-Ärendehandlingar. Version 1.0
+**Exempel:** SvKGS-Ärendehandlingar. Version 1.0
 
-> **Nyckel:**	`anpassad_informationstyp`<br/>
-> **Datatyp:**	sträng
+**Nyckel:**	`anpassad_informationstyp`<br/>
+**Datatyp:**	sträng
 
 ---
 
 ### *Gallring*
 
-> Inte obligatoriskt.
+Inte obligatoriskt.
 
-> Anger om leveransen (i sin helhet) är gallringsbar. Giltiga värden är "Yes" eller "No".
->
-> Om detta värde utelämnas i JSON-filen anses det betyda att värdet är "No".  E-arkivet tar i regel inte emot gallringsbar information.
-> Elementet kan också helt utelämnas.
+Anger om leveransen (i sin helhet) är gallringsbar. Giltiga värden är "Yes" eller "No".
+
+Om detta värde utelämnas i JSON-filen anses det betyda att värdet är "No".  E-arkivet tar i regel inte emot gallringsbar information.
+Elementet kan också helt utelämnas.
  
-> **Exempel:** No
+**Exempel:** No
 
-> **Nyckel:**	`gallring`<br/>
-> **Datatyp:**	sträng
+**Nyckel:**	`gallring`<br/>
+**Datatyp:**	sträng
 
 ---
 
 ### *Sekretess*
 
-> Inte obbligatoriskt.
+Inte obbligatoriskt.
 
-> Anger om leveransen innehåller information som kan omfattas av sekretess eller GDPR. Giltiga värden är "Secrecy" eller "GDPR".
->
-> Om ingen sekretess eller GDPR föreligger, utelämnas elementet i JSON-filen.
-> Om nyckeln finns i JSON-filen, men värdet är en tom sträng, anses det vara det samma om om elementet hade utelämnats.
+Anger om leveransen innehåller information som kan omfattas av sekretess eller GDPR. Giltiga värden är "Secrecy" eller "GDPR".
+
+Om ingen sekretess eller GDPR föreligger, utelämnas elementet i JSON-filen.
+Om nyckeln finns i JSON-filen, men värdet är en tom sträng, anses det vara det samma om om elementet hade utelämnats.
  
-> **Exempel:** Secrecy
+**Exempel:** Secrecy
 
-> **Nyckel:**	`sekretess`<br/>
-> **Datatyp:**	sträng
+**Nyckel:**	`sekretess`<br/>
+**Datatyp:**	sträng
 
 ---
 
 ### *Diarium: Kod*
 
-> Enbart obbligatoriskt om leveransen avser ärendehandlingar från diariesystem.
+Enbart obbligatoriskt om leveransen avser ärendehandlingar från diariesystem.
 
-> Kod i diariesystem för det diarium som leveransen avser.
+Kod i diariesystem för det diarium som leveransen avser.
  
-> **Exempel:** P
+**Exempel:** P
 
-> **Nyckel:**	`diarium_kod`<br/>
-> **Datatyp:**	sträng
+**Nyckel:**	`diarium_kod`<br/>
+**Datatyp:**	sträng
 
 ---
 
 ### *Diarium: Namn*
 
-> Enbart obbligatoriskt om leveransen avser ärendehandlingar från diariesystem.
+Enbart obbligatoriskt om leveransen avser ärendehandlingar från diariesystem.
 
-> Namn i diariesystem på det diarium som leveransen avser.
+Namn i diariesystem på det diarium som leveransen avser.
  
-> **Exempel:** Sunne pastorat
+**Exempel:** Sunne pastorat
 
-> **Nyckel:**	`diarium_namn`<br/>
-> **Datatyp:**	sträng
+**Nyckel:**	`diarium_namn`<br/>
+**Datatyp:**	sträng
 
 
 ## 3.2 Exempel på leveransbeskrivning
